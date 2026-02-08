@@ -14,12 +14,63 @@ If it is primarily theoretical work without an applied computational component,
   cap score at 0.25. -->
 
 ## keywords
-scientific computing, computational fluid dynamics, CFD, vortex methods, viscous vortical flows, high-Reynolds number flows, isotropic turbulence, N-body simulation, fast multipole method, FMM, treecode algorithms, radial basis function interpolation, meshless methods, immersed boundary methods, boundary element methods, biomolecular electrostatics, protein–surface interactions, Poisson–Boltzmann equation, nanoplasmonics, biosensing applications, exascale computing, high-performance computing, parallel computing, heterogeneous systems, GPU computing, multi-GPU computing, Python for scientific computing, Jupyter-based workflows, open source scientific software, research software engineering, reproducible research, reproducible computational science, replicability in science, reproducibility taxonomies, trustworthy computational evidence, open access and open data policy, open source policy for science agencies, engineering education, flipped classrooms in STEM, computational thinking in engineering, open learning modules, generative AI in engineering education, AI-era assessment design, conversational exams, physics-informed neural networks, scientific machine learning, verification and validation for ML models, journal publishing workflows, software publication and review, scientific workflows on public clouds
+- scientific computing
+- computational fluid dynamics
+- CFD
+- vortex methods
+- viscous vortical flows
+- high-Reynolds number flows
+- isotropic turbulence
+- N-body simulation
+- fast multipole method
+- FMM
+- treecode algorithms
+- radial basis function interpolation
+- meshless methods
+- immersed boundary methods
+- boundary element methods
+- biomolecular electrostatics
+- protein–surface interactions
+- Poisson–Boltzmann equation
+- nanoplasmonics
+- biosensing applications
+- exascale computing
+- high-performance computing
+- parallel computing
+- heterogeneous systems
+- GPU computing
+- multi-GPU computing
+- Python for scientific computing
+- Jupyter-based workflows
+- open source scientific software
+- research software engineering
+- reproducible research
+- reproducible computational science
+- replicability in science
+- reproducibility taxonomies
+- trustworthy computational evidence
+- open access and open data policy
+- open source policy for science agencies
+- engineering education
+- flipped classrooms in STEM
+- computational thinking in engineering
+- open learning modules
+- generative AI in engineering education
+- AI-era assessment design
+- conversational exams
+- physics-informed neural networks
+- scientific machine learning
+- verification and validation for ML models
+- journal publishing workflows
+- software publication and review
+- scientific workflows on public clouds
 
 ## narrative
 My work centers on scientific computing and high‑performance methods for simulating complex physical systems, especially in fluid dynamics and biomolecular electrostatics. I have made contributions to meshless vortex methods, fast multipole algorithms, and GPU‑accelerated solvers that enable large‑scale simulations such as turbulence, N‑body interactions, and protein–surface electrostatics. 
 
 A major strand of my research and community leadership focuses on reproducible and replicable computational science, including terminology, taxonomies, workflows, and policy for open source software and trustworthy computational evidence. In parallel, I am active in engineering education and pedagogy, developing open learning resources with Python and Jupyter, writing about computational thinking, and exploring the role of generative AI and new assessment designs in engineering curricula.
+
+## paper titles
 
 Some of my paper titles include:
 - Reproducibility and replicability in science
