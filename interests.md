@@ -5,96 +5,60 @@
 <!-- 
 ## scoring block
 Scoring calibration:
-Score ≥ 0.80 ONLY if the item clearly involves electrophysiology or physiological time series
-  (EEG/MEG/LFP/iEEG/ECoG/neuronal spiking) OR aperiodic/1/f, oscillations, waveform shape,
-  spectral parameterization, or neuronal timescales — OR introduces a general time-series/signal
-  processing method that would transfer to those data.
+Score ≥ 0.80 ONLY if the item clearly involves modern computational science developments including scientific machine learning.
 
-If it is primarily about drugs/behavior/psychiatric symptoms without neural/physio time-series analysis,
+If it is primarily about machine learning without an application in computational science and engineering,
   cap score at 0.40.
 
-If it is primarily microbiology/immunology/metabolism/genetics without neural dynamics methods,
+If it is primarily theoretical work without an applied computational component,
   cap score at 0.25. -->
 
 ## keywords
-EEG
-electroencephalography
-MEG
-magnetooencephalography
-LFP
-local field potential
-iEEG
-ECoG
-electrocorticography
-neural oscillations
-aperiodic activity
-neural timescales
-ECG
-electrocorticography
-working memory
-attention
-cognitive control
-respiration waveform
-specparam
-spectral parameterization
-fooof
-bycycle
-neural data science
-computational neuroscience
-neural computation
-aging and cognition
+scientific computing, computational fluid dynamics, CFD, vortex methods, viscous vortical flows, high-Reynolds number flows, isotropic turbulence, N-body simulation, fast multipole method, FMM, treecode algorithms, radial basis function interpolation, meshless methods, immersed boundary methods, boundary element methods, biomolecular electrostatics, protein–surface interactions, Poisson–Boltzmann equation, nanoplasmonics, biosensing applications, exascale computing, high-performance computing, parallel computing, heterogeneous systems, GPU computing, multi-GPU computing, Python for scientific computing, Jupyter-based workflows, open source scientific software, research software engineering, reproducible research, reproducible computational science, replicability in science, reproducibility taxonomies, trustworthy computational evidence, open access and open data policy, open source policy for science agencies, engineering education, flipped classrooms in STEM, computational thinking in engineering, open learning modules, generative AI in engineering education, AI-era assessment design, conversational exams, physics-informed neural networks, scientific machine learning, verification and validation for ML models, journal publishing workflows, software publication and review, scientific workflows on public clouds
 
 ## narrative
-My research focuses on large-scale neural and physiological dynamics using computational and data-science approaches across species and recording modalities. I work extensively with heterogeneous datasets (EEG, LFP, iEEG, behavioral and physiological signals), emphasizing open science, reproducible methods, and scalable analysis tools for neural time series.
+My work centers on scientific computing and high‑performance methods for simulating complex physical systems, especially in fluid dynamics and biomolecular electrostatics. I have made contributions to meshless vortex methods, fast multipole algorithms, and GPU‑accelerated solvers that enable large‑scale simulations such as turbulence, N‑body interactions, and protein–surface electrostatics. 
 
-A central theme of my work is developing and applying methods to better characterize neural oscillations and aperiodic (1/f-like) activity. My lab pioneered approaches to analyzing oscillatory waveform shape and spectral parameterization, demonstrating that nonsinusoidal features and aperiodic structure provide insight into synaptic physiology, excitation–inhibition balance, cognitive function, and development. We develop and release open-source Python tools for neural signal processing and apply them to large longitudinal and cross-species datasets to link brain dynamics with cognition, behavior, and disease.
-
-I study how neural oscillations, aperiodic activity, and neuronal timescales support computation and information transfer in brain networks. Using invasive and noninvasive electrophysiology, computational modeling, and large-scale data integration, my work shows how these features relate to working memory, attention, development, and aging. I am particularly interested in theoretical and methodological advances that improve interpretation of neural and physiological time series, enable biomarker discovery, and connect brain dynamics to cognition and clinical outcomes.
-
-I prioritize research that introduces new analytic methods, theoretical frameworks, or empirical findings relevant to neural dynamics, physiological signal analysis, and cross-scale brain–behavior relationships. I am generally not interested in fMRI/BOLD unless it directly connects to electrophysiological dynamics or time-series methods, or novel AI / LLM / machine learning.
+A major strand of my research and community leadership focuses on reproducible and replicable computational science, including terminology, taxonomies, workflows, and policy for open source software and trustworthy computational evidence. In parallel, I am active in engineering education and pedagogy, developing open learning resources with Python and Jupyter, writing about computational thinking, and exploring the role of generative AI and new assessment designs in engineering curricula.
 
 Some of my paper titles include:
-* Automated cognome construction and semi-automated hypothesis generation
-* Oscillatory dynamics coordinating human frontal networks in support of goal maintenance
-* Age-related changes in 1/f neural electrophysiological noise
-* Alpha phase dynamics predict age-related visual working memory decline
-* Nonsinusoidal beta oscillations reflect cortical pathophysiology in Parkinson's disease
-* Inferring synaptic excitation/inhibition balance from field potentials
-* Setd5 haploinsufficiency alters neuronal network connectivity and leads to autistic-like behaviors in mice
-* Characteristics of waveform shape in Parkinson’s disease detected with scalp electroencephalography
-* Field potential 1/f activity in the subcallosal cingulate region as a candidate signal for monitoring deep brain stimulation for treatment resistant depression
-* Cycle-by-cycle analysis of neural oscillations
-* Complex Oscillatory Waves Emerging from Cortical Organoids Model Early Human Brain Network Development
-* EEG Power Spectral Slope differs by ADHD status and stimulant medication exposure in early childhood
-* Memantine effects on EEG measures of putative excitatory/inhibitory balance in schizophrenia
-* NitroSynapsin ameliorates hypersynchronous neural network activity in Alzheimer hiPSC models
-* Linked sources of neural noise contribute to age-related cognitive decline
-* Homeostatic mechanisms may shape the type and duration of oscillatory modulation
-* Electrophysiological frequency band ratio measures conflate periodic and aperiodic neural activity
-* Parameterizing neural power spectra into periodic and aperiodic components
-* Neuronal timescales are functionally dynamic and shaped by cortical microarchitecture
-* Longitudinal changes in aperiodic and periodic activity in electrophysiological recordings in the first seven months of life
-* Enhancing oscillations in intracranial electrophysiological recordings with data-driven spatial filters
-* Modality-specific tracking of attention and sensory statistics in the human electrophysiological spectral exponent
-* Automated meta-analysis of the event-related potential (ERP) literature
-* Spectral parameterization for studying neurodevelopment: How and why. Dev Cogn Neurosci (2022).
-* Aperiodic neural activity is a better predictor of schizophrenia than neural oscillations
-* Neurophysiological signatures of cortical micro-architecture
-* Clinical EEG slowing induced by electroconvulsive therapy is better described by increased frontal aperiodic activity
-* Magnetic seizure therapy and electroconvulsive therapy increase aperiodic activity
-* Development of neuronal timescales in human cortical organoids and rat hippocampus dissociated cultures
-* Changes in electrophysiological aperiodic activity during cognitive control in Parkinson’s disease
-* Resting-state alpha and mu rhythms change shape across development but lack diagnostic sensitivity for ADHD and autism
-* Time-resolved aperiodic and oscillatory dynamics during human visual memory encoding
-* Differential representations of spatial location by aperiodic and alpha oscillatory activity in working memory
-* Functional connectivity is dominated by aperiodic, rather than oscillatory, coupling
-* Cannabidiol blood metabolite levels after cannabidiol treatment are associated with broadband EEG changes and improvements in visuomotor and non-verbal cognitive abilities in boys with autism requiring higher levels of support
-* Dissociating contributions of theta and alpha oscillations from aperiodic neural activity in human visual working memory
-* Pharmacological manipulation of nested oscillations in human iPSC-derived 2D neuronal networks
-* Dynamic network communication as a unifying neural basis for cognition, development, aging, and disease
-* Brain oscillations and the importance of waveform shape
-* The logic of developing neocortical circuits in health and disease
-* Methodological considerations for studying neural oscillations
-* From mechanisms to markers: novel non-invasive EEG proxy markers of the neural excitation and inhibition system in humans
-* The data science future of neuroscience theory
-* Processes and Measurements: a Framework for Understanding Neural Oscillations in Field Potentials
+- Reproducibility and replicability in science
+- Terminologies for reproducible research
+- Advances in viscous vortex methods—meshless spatial adaption based on radial basis function interpolation
+- Sustainable computational science: the ReScience initiative
+- Biomolecular electrostatics using a fast multipole BEM on up to 512 GPUs and a billion unknowns 
+- PetRBF—A parallel O(N) algorithm for radial basis function interpolation with Gaussians
+- Petascale turbulence simulation using a highly parallel fast multipole method on GPUs
+- A Tuned and Scalable Fast Multipole Method as a Preeminent Algorithm for Exascale Systems
+- Teaching and learning with Jupyter
+- Treecode and fast multipole method for N-body simulation with CUDA 
+- PetFMM—A dynamically load‐balancing parallel fast multipole library
+- Vortex Method for computing high-Reynolds number flows: Increased accuracy with a fully mesh-less formulation
+- Experience report of physics-informed neural networks in fluid simulations: pitfalls and frustration
+- CFD Python: the 12 steps to Navier-Stokes equations 
+- Hierarchical n-body simulations with autotuning for heterogeneous systems
+- Lift and wakes of flying snakes
+- Reproducible and replicable computational fluid dynamics: It’s harder than you think
+- A biomolecular electrostatics solver using Python, GPUs and boundary elements that can handle solvent-filled cavities and Stern layers
+- The hard road to reproducibility 
+- Journal of Open Source Software (JOSS): design and first-year review
+- Fast radial basis function interpolation with Gaussians by localization and iteration
+- Computational Thinking: I do not think it means what you think it means
+- FMM-based vortex method for simulation of isotropic turbulence on GPUs, compared with a spectral method
+- How will the fast multipole method fare in the exascale era
+- Open Source Software Policy Options for NASA Earth and Space Sciences
+- ExaFMM: a high-performance fast multipole method library with C++ and Python interfaces
+- Emergence and evolution of tripole vortices from net-circulation initial conditions
+- Numerical investigations on the accuracy of the vortex method with and without remeshing
+- Toward a compatible reproducibility taxonomy for computational and computing sciences
+- Characterization of the accuracy of the fast multipole method in particle simulations
+- Praxis of reproducible computational science
+- Predictive limitations of physics-informed neural networks in vortex shedding 
+- Global field interpolation for particle methods
+- Comparing the treecode with FMM on GPUs for vortex particle simulations of a leapfrogging vortex ring
+- Probing protein orientation near charged nanosurfaces for simulation-assisted biosensor design
+- cuIBM--a GPU-accelerated immersed boundary method
+- How to obtain efficient GPU kernels: An illustration using FMM & FGT algorithms
+- Aero Python: classical aerodynamics of potential flow using Python
+- Poisson–Boltzmann model for protein–surface electrostatic interactions and grid-convergence study using the PyGBe code
+- Defining the role of open source software in research reproducibility
