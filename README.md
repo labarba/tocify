@@ -1,9 +1,9 @@
-# tocify — Weekly Journal ToC Digest (RSS → OpenAI → `digest.md`)
+# tocify — Weekly Journal ToC Digest (RSS → Claude → `digest.md`)
 
 This repo runs a GitHub Action once a week (or on-demand) that:
 
 1. pulls new items from a list of journal RSS feeds  
-2. uses OpenAI to triage which items match your research interests  
+2. uses Anthropic Claude to triage which items match your research interests  
 3. writes a ranked digest to `digest.md` and commits it back to the repo
 
 It’s meant to be forked and customized.
@@ -14,7 +14,7 @@ This was almost entirely vibe-coded as an exercise (I'm pleased at how well it w
 
 ## What’s in this repo
 
-- **`digest.py`** — the pipeline (fetch RSS → filter → OpenAI triage → render markdown)
+- **`digest.py`** — the pipeline (fetch RSS → filter → Claude triage → render markdown)
 - **`feeds.txt`** — RSS feed list (supports comments; optionally supports `Name | URL`)
 - **`interests.md`** — your keywords + narrative seed (used for relevance)
 - **`prompt.txt`** — the prompt template (easy to tune without editing Python)
@@ -29,14 +29,14 @@ This was almost entirely vibe-coded as an exercise (I'm pleased at how well it w
 ### 1) Fork the repo
 - Click **Fork** on GitHub to copy this repo into your account.
 
-### 2) Enable OpenAI billing / credits
-The OpenAI API requires an active billing setup or credits.
-- Go to the OpenAI Platform and ensure billing is enabled and/or credits are available.
-- If you see errors like `insufficient_quota` or `You exceeded your current quota`, this is the cause.
+### 2) Enable Anthropic billing / credits
+The Anthropic API requires an active billing setup or credits.
+- Go to the [Anthropic Console](https://console.anthropic.com/) and ensure billing is enabled and/or credits are available.
+- If you see errors like `insufficient_quota`, this is the cause.
 - I recommend putting in spending limits. This uses very little compute, but it's nice to be careful.
 
-### 3) Create an OpenAI API key
-Create an API key in the OpenAI Platform and copy it.
+### 3) Create an Anthropic API key
+Create an API key in the [Anthropic Console](https://console.anthropic.com/) and copy it.
 
 **Important:** never commit this key to the repo.
 
@@ -44,8 +44,8 @@ Create an API key in the OpenAI Platform and copy it.
 In your forked repo:
 - Go to **Settings → Secrets and variables → Actions**
 - Click **New repository secret**
-- Name: `OPENAI_API_KEY`
-- Value: paste your OpenAI API key
+- Name: `ANTHROPIC_API_KEY`
+- Value: paste your Anthropic API key
 
 That’s it—GitHub will inject it into the workflow at runtime.
 
@@ -61,3 +61,4 @@ PLOS Biology | https://journals.plos.org/plosbiology/rss
 
 # Preprints
 bioRxiv neuroscience | https://www.biorxiv.org/rss/subject/neuroscience.xml
+```
