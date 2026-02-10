@@ -13,3 +13,6 @@ Nature Machine Intell | https://www.nature.com/natmachintell.rss
 # arXiv subjects
 Computers and Society | https://rss.arxiv.org/rss/cs.CY
 Computational Engineering | https://rss.arxiv.org/rss/cs.CE
+
+# scientific computing
+SIAM Journal on Scientific Computing | https://epubs.siam.org/action/showFeed?type=etoc&feed=rss&jc=sjoce3
