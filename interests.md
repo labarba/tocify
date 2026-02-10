@@ -20,7 +20,6 @@ If it is primarily theoretical work without an applied computational component,
 - CFD
 - viscous vortical flows
 - high-Reynolds number flows
-- isotropic turbulence
 - N-body simulation
 - fast multipole method
 - FMM
