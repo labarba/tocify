@@ -8,7 +8,7 @@ from anthropic import Anthropic, APIStatusError, APIResponseValidationError, API
 
 
 # ---- config (env-tweakable) ----
-MODEL = os.getenv("ANTHROPIC_MODEL", "claude-3-5-sonnet-20241022")
+MODEL = os.getenv("ANTHROPIC_MODEL", "claude-3-5-sonnet-latest")
 MAX_ITEMS_PER_FEED = int(os.getenv("MAX_ITEMS_PER_FEED", "50"))
 MAX_TOTAL_ITEMS = int(os.getenv("MAX_TOTAL_ITEMS", "400"))
 LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
