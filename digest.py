@@ -278,7 +278,15 @@ def render_digest_md(result: dict, items_by_id: dict[str, dict]) -> str:
     week_of = result["week_of"]
     notes = result.get("notes", "").strip()
     ranked = result.get("ranked", [])
-    kept = [r for r in ranked if r["score"] >= MIN_SCORE_READ][:MAX_RETURNED]
+    
+    # Ensure a minimum of 20 articles if possible, otherwise take what's available
+    kept = [r for r in ranked if r["score"] >= MIN_SCORE_READ]
+    if len(kept) < 20 and len(ranked) >= 20:
+        kept = ranked[:20]
+    elif len(kept) < 20:
+        kept = ranked
+    
+    kept = kept[:MAX_RETURNED]
 
     lines = [f"# Weekly ToC Digest (week of {week_of})", ""]
     if notes:

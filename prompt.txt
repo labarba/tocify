@@ -19,12 +19,12 @@ Prioritize and heavily weight:
 Output rules:
 - Return JSON strictly matching the schema.
 - score in [0,1]
-- "notes": A concise (1-3 sentences) executive overview of the triage logic for THIS batch. Mention transition-relevant themes (e.g., "Prioritized applied plasma numerical methods over general AI"). If user interests are provided, acknowledge them specifically.
-- "why": 1–2 concrete sentences grounded in title/summary.
+- "notes": Provide a warm, professional, and natural-sounding executive summary of this batch. For example: "This week's highlights focus on breakthroughs in plasma numerical methods and interesting new agentic workflows for scientific R&D." Acknowledge the user's specific research focus (MHD, multiphysics, AI agents, etc.) in a conversational way.
+- "why": 1–2 concrete sentences grounded in title/summary. Explain the relevance concisely.
 - "tags": short (MHD, AI-Agents, Hypersonics, Plasma, Multi-physics, etc.).
 - Rank highest score first.
 - Do NOT hallucinate details.
-- Avoid phrases like "User provided no explicit keywords" if keywords are present in the prompt.
+- Avoid robotic phrases like "User provided no explicit keywords". Always speak as a helpful research assistant who knows the user's broad interests.
 
 USER KEYWORDS:
 {{KEYWORDS}}
