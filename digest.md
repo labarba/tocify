@@ -1,177 +1,194 @@
-# Weekly ToC Digest (week of 2026-02-09)
+# Weekly ToC Digest (week of 2026-02-10)
 
-This week, the highlights include new computational methods for data harmonization and reviews on waveform dynamics in neural processing. Only relevant articles based on user's interests in neural dynamics and physiological signal processing are included. Prioritization was based on relevance to neural and physiological time series analysis, focusing on methods, neural dynamics, and electrophysiology. This week's selection includes articles primarily focused on clinical and molecular topics with minimal overlap with neural and electrophysiological interests. Only one paper is relevant to neural and physiological signal processing, involving neural populations in motor challenges. Other papers are heavily oriented towards molecular biology, clinical, or unrelated topics.
+User has no explicit keywords or interests listed. Scoring based on the interest profile provided: prioritize MHD, plasma physics (especially thrusters and non-ideal effects), numerical methods, multi-physics modeling, AI agents for scientific workflows, and PINNs. Heavily downweight biology, medicine, social sciences, and general-purpose AI. Moderate downweight of purely theoretical papers without computational depth. User profile is an academic scientist with strong interests in MHD, plasma thruster physics (MPD/Hall), non-ideal MHD effects, AI agents for scientific workflows, physics-informed neural networks, numerical methods for plasma simulations, multi-physics modeling in extreme environments, agentic workflows for engineering optimization, and spacecraft/satellite dynamics. No specific keywords were provided, but evaluation heavily prioritizes these technical domains. This digest reflects items most relevant to computational/scientific/engineering applications. Note: The RSS fe
 
-**Included:** 10 (score ≥ 0.35)  
-**Scored:** 12 total items
+**Included:** 11 (score ≥ 0.35)  
+**Scored:** 24 total items
 
 ---
 
-## [EEG Bad-Channel Detection Using Multi-Feature Thresholding and Co-occurrence of High-Amplitude Transients](https://www.biorxiv.org/content/10.64898/2026.02.04.703874v1?rss=1)
-*bioRxiv*  
-Score: **0.90**  
-Published: 2026-02-07T00:00:00+00:00
-Tags: EEG, methods, signal processing
+## [Aster: Autonomous Scientific Discovery over 20x Faster Than Existing Methods](https://arxiv.org/abs/2602.07040)
+*arXiv Artificial Intelligence*  
+Score: **0.72**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Scientific-Discovery, Optimization, Agentic-Workflows
 
-This paper presents a method for EEG signal preprocessing, relevant to physiological signal processing, and involves quality control of EEG data.
+Agentic AI system for autonomous scientific discovery with iterative program refinement and state-of-the-art performance gains. Directly applicable to physics simulation workflows and engineering optimization loops.
 
 <details>
 <summary>RSS summary</summary>
 
-Bad channels in electroencephalography (EEG) recordings can substantially degrade downstream analyses, particularly in high-density datasets where localized hardware or motion-related artifacts may affect groups of electrodes in a structured manner. We introduce a MATLAB Module for bad-channel quality control that emphasizes interpretability, relational structure, and human-in-the-loop validation rather than fully automated rejection. The method operates on multi-channel EEG data and combines co…
+arXiv:2602.07040v1 Announce Type: new Abstract: We introduce Aster, an AI agent for autonomous scientific discovery capable of operating over 20 times faster than existing frameworks. Given a task, an initial program, and a script to evaluate the performance of the program, Aster iteratively improves the program, often leading to new state-of-the-art performances. Aster's significant reduction in the number of iterations required for novel discovery expands the domain of tractable problems to in…
 
 </details>
 
 ---
 
-## [xGNN4MI: explainability of graph neural networks in 12-lead electrocardiography for cardiovascular disease classification](https://www.nature.com/articles/s41746-026-02367-1)
-*npj Digital Med*  
-Score: **0.90**  
-Published: 2026-02-06T00:00:00+00:00
-Tags: ECG, methods, signal processing
+## [GraphAgents: Knowledge Graph-Guided Agentic AI for Cross-Domain Materials Design](https://arxiv.org/abs/2602.07491)
+*arXiv Artificial Intelligence*  
+Score: **0.68**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Multi-physics, Scientific-Discovery, Materials-Science
 
-Focuses on the explainability of neural networks in processing ECG data, aligning with interests in physiological signal processing and data science methods.
+Multi-agent LLM framework connecting cross-domain scientific concepts for materials design and discovery. Demonstrates agentic reasoning for physics-informed engineering problems integrating chemistry and mechanical performance.
 
 <details>
 <summary>RSS summary</summary>
 
-<p>npj Digital Medicine, Published online: 06 February 2026; <a href="https://www.nature.com/articles/s41746-026-02367-1">doi:10.1038/s41746-026-02367-1</a></p>xGNN4MI: explainability of graph neural networks in 12-lead electrocardiography for cardiovascular disease classification
+arXiv:2602.07491v1 Announce Type: new Abstract: Large Language Models (LLMs) promise to accelerate discovery by reasoning across the expanding scientific landscape. Yet, the challenge is no longer access to information but connecting it in meaningful, domain-spanning ways. In materials science, where innovation demands integrating concepts from molecular chemistry to mechanical performance, this is especially acute. Neither humans nor single-agent LLMs can fully contend with this torrent of info…
 
 </details>
 
 ---
 
-## [MV-ComBat and MV-CovBat: Multivariate Frameworks for Joint Harmonization of Multi-Metric Neuroimaging Data](https://www.biorxiv.org/content/10.64898/2026.02.05.704069v1?rss=1)
-*bioRxiv*  
-Score: **0.80**  
-Published: 2026-02-09T00:00:00+00:00
-Tags: methods, neuroimaging, data science
+## [MSP-LLM: A Unified Large Language Model Framework for Complete Material Synthesis Planning](https://arxiv.org/abs/2602.07543)
+*arXiv Artificial Intelligence*  
+Score: **0.65**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Scientific-Workflows, Materials-Design, Multi-step-Reasoning
 
-Relevant due to focus on computational frameworks for harmonization across multiple metrics, which aligns with interests in data science methods and physiological signal processing.
+LLM-based unified framework for material synthesis planning combining precursor selection with operation sequencing. Exemplifies agentic scientific workflow integration across complex engineering domains.
 
 <details>
 <summary>RSS summary</summary>
 
-Aggregating neuroimaging data across sites and studies is increasingly common, yet site- and scanner-related batch effects can obscure meaningful biological variation and introduce spurious associations. Although ComBat and its extensions are widely used, they are primarily designed for single-metric (univariate) harmonization. In practice, neuroimaging studies often involve multiple biologically coupled metrics (e.g., cortical thickness, surface area, and gray-matter volume) measured across mul…
+arXiv:2602.07543v1 Announce Type: new Abstract: Material synthesis planning (MSP) remains a fundamental and underexplored bottleneck in AI-driven materials discovery, as it requires not only identifying suitable precursor materials but also designing coherent sequences of synthesis operations to realize a target material. Although several AI-based approaches have been proposed to address isolated subtasks of MSP, a unified methodology for solving the entire MSP task has yet to be established. We…
 
 </details>
 
 ---
 
-## [Use-dependent regulation of the axonal action potential in parvalbumin-expressing interneurons](https://www.biorxiv.org/content/10.64898/2026.02.07.704588v1?rss=1)
-*bioRxiv*  
-Score: **0.80**  
-Published: 2026-02-07T00:00:00+00:00
-Tags: neuronal timescales, neuronal dynamics, electrophysiology
+## [IV Co-Scientist: Multi-Agent LLM Framework for Causal Instrumental Variable Discovery](https://arxiv.org/abs/2602.07943)
+*arXiv Artificial Intelligence*  
+Score: **0.62**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Causal-Inference, Scientific-Discovery, Multi-agent
 
-Focuses on neuronal computation and electrophysiology with axonal AP propagation which aligns with neuronal timescales and dynamics.
+Two-stage multi-agent LLM framework for scientific variable discovery requiring interdisciplinary knowledge and contextual reasoning. Relevant to physics-informed discovery workflows.
 
 <details>
 <summary>RSS summary</summary>
 
-The action potential (AP) is thought to be generated at the axon initial segment and to faithfully propagate along the axon. However, data from both invertebrate and mammalian systems show that the axon is an underappreciated locus of activity modulation and neuronal computation. We assessed axonal AP propagation in neocortical parvalbumin-expressing interneurons (PV-INs) during prolonged, high-frequency activity through paired whole-cell somatic and axon-attached patch clamp recordings in acute…
+arXiv:2602.07943v1 Announce Type: new Abstract: In the presence of confounding between an endogenous variable and the outcome, instrumental variables (IVs) are used to isolate the causal effect of the endogenous variable. Identifying valid instruments requires interdisciplinary knowledge, creativity, and contextual understanding, making it a non-trivial task. In this paper, we investigate whether large language models (LLMs) can aid in this task. We perform a two-stage evaluation framework. Firs…
 
 </details>
 
 ---
 
-## [Potentiation of active locomotor state by spinal-projecting serotonergic neurons](https://www.cell.com/neuron/fulltext/S0896-6273(25)00935-3?rss=yes)
-*Neuron*  
-Score: **0.80**  
-Published: 2026-02-06T00:00:00+00:00
-Tags: electrophysiology, timescales
+## [W&D: Scaling Parallel Tool Calling for Efficient Deep Research Agents](https://arxiv.org/abs/2602.07359)
+*arXiv Artificial Intelligence*  
+Score: **0.58**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Research-Automation, Tool-Calling, Parallel-Reasoning
 
-Discusses neuronal activity modulation over time scales, relevant to interests in neuronal timescales and electrophysiology.
+Agentic research framework scaling parallel tool calling and multi-step reasoning. Applicable to accelerating scientific computational workflows and literature synthesis.
 
 <details>
 <summary>RSS summary</summary>
 
-Fenstermacher et al. map the structure and activity of spinal-projecting serotonergic neurons and show that 5-HT populations are engaged in a context-dependent manner during locomotion. Activation of ventrally projecting 5-HT neurons enhances the speed and endurance of ongoing locomotion, revealing serotonergic neurons can potentiate motor output over extended time scales.
+arXiv:2602.07359v1 Announce Type: new Abstract: Deep research agents have emerged as powerful tools for automating complex intellectual tasks through multi-step reasoning and web-based information seeking. While recent efforts have successfully enhanced these agents by scaling depth through increasing the number of sequential thinking and tool calls, the potential of scaling width via parallel tool calling remains largely unexplored. In this work, we propose the Wide and Deep research agent, a f…
 
 </details>
 
 ---
 
-## [Cortical traveling waves in time and space: Physics, physiology, and psychology](https://www.cell.com/neuron/fulltext/S0896-6273(25)00975-4?rss=yes)
-*Neuron*  
-Score: **0.70**  
-Published: 2026-02-09T00:00:00+00:00
-Tags: oscillations, aperiodic, dynamics
+## [Theory of Space: Can Foundation Models Construct Spatial Beliefs through Active Exploration?](https://arxiv.org/abs/2602.07055)
+*arXiv Artificial Intelligence*  
+Score: **0.52**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Spatial-Reasoning, Control-Systems, Active-Learning
 
-This review connects wave physics with cortical wave phenomena, pertinent to interests in oscillations and neural dynamics.
+Studies active exploration and spatial reasoning in embodied agents under partial observability. Potentially relevant to spacecraft/satellite attitude estimation and navigation in uncertain environments.
 
 <details>
 <summary>RSS summary</summary>
 
-Cruddas et al. reviewed how core concepts from wave physics relate to cortical wave physiology and psychology. They examined how cortical waves emerge, how they facilitate coordinated, hierarchical, and counterstream dynamics, and how they encode perceptual and behavioral signals.
+arXiv:2602.07055v1 Announce Type: new Abstract: Spatial embodied intelligence requires agents to act to acquire information under partial observability. While multimodal foundation models excel at passive perception, their capacity for active, self-directed exploration remains understudied. We propose Theory of Space, defined as an agent's ability to actively acquire information through self-directed, active exploration and to construct, revise, and exploit a spatial belief from sequential, part…
 
 </details>
 
 ---
 
-## [When can neuronal activity-dependent homeostatic plasticity maintain circuit-level properties?](https://www.biorxiv.org/content/10.64898/2026.02.07.704433v1?rss=1)
-*bioRxiv*  
-Score: **0.70**  
-Published: 2026-02-07T00:00:00+00:00
-Tags: neuronal dynamics, plasticity, electrophysiology
+## [Time Series Reasoning via Process-Verifiable Thinking Data Synthesis and Scheduling for Tailored LLM Reasoning](https://arxiv.org/abs/2602.07830)
+*arXiv Artificial Intelligence*  
+Score: **0.48**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Time-Series, Reasoning, RL-Scheduling
 
-Discusses activity-dependent plasticity in neural circuits, relevant to neuronal timescales and electrophysiology.
+LLM reasoning framework for time-series analysis with process verification and reinforcement learning. Could be adapted for temporal dynamics in plasma simulations or spacecraft trajectory analysis.
 
 <details>
 <summary>RSS summary</summary>
 
-Neural circuits are remarkably robust to perturbations that threaten their function. Activity-dependent homeostatic plasticity (ADHP) is a stabilizing mechanism that supports robustness by tuning neuronal ion conductances to combat chronic over- or under-activity. Its restorative capacity has been demonstrated in the pyloric circuit of the crustacean stomatogastric ganglion, whose neurons must burst in a specific order to coordinate digestive muscles. After disruption by physical and pharmacolog…
+arXiv:2602.07830v1 Announce Type: new Abstract: Time series is a pervasive data type across various application domains, rendering the reasonable solving of diverse time series tasks a long-standing goal. Recent advances in large language models (LLMs), especially their reasoning abilities unlocked through reinforcement learning (RL), have opened new opportunities for tackling tasks with long Chain-of-Thought (CoT) reasoning. However, leveraging LLM reasoning for time series remains in its infan…
 
 </details>
 
 ---
 
-## [Compensatory scaling of modulatory neural populations in response to motor challenges](https://www.pnas.org/doi/abs/10.1073/pnas.2519741123?af=R)
-*PNAS*  
-Score: **0.70**  
-Published: 2026-02-05T08:00:00+00:00
-Tags: timescales, neural
+## [Data Darwinism Part I: Unlocking the Value of Scientific Data for Pre-training](https://arxiv.org/abs/2602.07824)
+*arXiv Artificial Intelligence*  
+Score: **0.46**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: Data-Quality, Scientific-Data, Pre-training, Foundation-Models
 
-Highlights how modulatory neural systems adjust to motor demands, relevant to neural timescales and cross-species electrophysiology.
+Introduces data quality taxonomy (L0-L9) for scientific literature corpus construction and model co-evolution. Foundational for training domain-specific models on physics/engineering literature.
 
 <details>
 <summary>RSS summary</summary>
 
-Proceedings of the National Academy of Sciences, Volume 123, Issue 6, February 2026. <br />SignificanceMultiple modulatory systems like the serotonergic and spinal V0c interneurons studied here interact during locomotion. We demonstrate how the nervous system matches motor output to the motor demand of behaviors, and that motor demand is a ...
+arXiv:2602.07824v1 Announce Type: new Abstract: Data quality determines foundation model performance, yet systematic processing frameworks are lacking. We introduce Data Darwinism, a ten-level taxonomy (L0-L9) that conceptualizes data-model co-evolution: advanced models produce superior data for next-generation systems. We validate this on scientific literature by constructing Darwin-Science, a 900B-token corpus (L0-L5). We identify a learnability gap in raw scientific text, which we bridge via …
 
 </details>
 
 ---
 
-## [In vivo autofluorescence lifetime imaging of spatial metabolic heterogeneities and learning-induced changes in the Drosophila mushroom body](https://elifesciences.org/articles/106040)
-*eLife*  
-Score: **0.60**  
-Published: 2026-02-09T00:00:00+00:00
-Tags: methods, metabolic, brain
+## [Learning to Continually Learn via Meta-learning Agentic Memory Designs](https://arxiv.org/abs/2602.07755)
+*arXiv Artificial Intelligence*  
+Score: **0.44**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Memory-Systems, Continual-Learning, Adaptation
 
-This study speaks to the exploration of metabolic aspects underlying brain function, relevant for understanding neural dynamics and electrophysiology.
+Addresses agentic memory mechanisms for continual learning and test-time adaptation. Relevant to long-horizon autonomy in spacecraft and adaptive control systems.
 
 <details>
 <summary>RSS summary</summary>
 
-Neuronal energy regulation is increasingly recognized as a critical factor underlying brain functions and their pathological alterations, yet the metabolic dynamics that accompany cognitive processes remain poorly understood. As a label-free and minimally invasive technique, fluorescence lifetime imaging (FLIM) of coenzymes NADH and NADPH (collectively referred to as NAD(P)H) offers the possibility to resolve cellular metabolic profiles with high spatial precision. However, NAD(P)H FLIM’s capaci…
+arXiv:2602.07755v1 Announce Type: new Abstract: The statelessness of foundation models bottlenecks agentic systems' ability to continually learn, a core capability for long-horizon reasoning and adaptation. To address this limitation, agentic systems commonly incorporate memory modules to retain and reuse past experience, aiming for continual learning during test time. However, most existing memory designs are human-crafted and fixed, which limits their ability to adapt to the diversity and non-…
 
 </details>
 
 ---
 
-## [Knockout of PI4-Kinase A in GnRH Neurons Causes their Prepubertal Death](https://www.biorxiv.org/content/10.64898/2026.02.04.703844v1?rss=1)
-*bioRxiv*  
-Score: **0.60**  
-Published: 2026-02-07T00:00:00+00:00
-Tags: neuronal development, signaling pathways
+## [ToolSelf: Unifying Task Execution and Self-Reconfiguration via Tool-Driven Intrinsic Adaptation](https://arxiv.org/abs/2602.07883)
+*arXiv Artificial Intelligence*  
+Score: **0.42**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: AI-Agents, Self-Adaptation, Dynamic-Configuration, Agentic-Systems
 
-Neural differentiation and signaling pathways might offer insights on neuronal development, but less directly connected to focal interests such as timescales or signal processing.
+Framework for dynamic agent reconfiguration and self-adaptation during task execution. Could inform adaptive control strategies for thruster systems or multi-physics solvers.
 
 <details>
 <summary>RSS summary</summary>
 
-The signaling pathways that control embryonic development, migration, and differentiation of gonadotropin-releasing hormone (GnRH) neurons, as well as the postnatal fate, function, and survival of differentiated cells, are the subject of ongoing research. Here, we examined the role of phosphoinositides in this complex multistep process by generating GnRH neuron-specific phosphatidylinositol 4-kinase alpha knockout mice. These mice were healthy and indistinguishable from their control littermates…
+arXiv:2602.07883v1 Announce Type: new Abstract: Agentic systems powered by Large Language Models (LLMs) have demonstrated remarkable potential in tackling complex, long-horizon tasks. However, their efficacy is fundamentally constrained by static configurations governing agent behaviors, which are fixed prior to execution and fail to adapt to evolving task dynamics. Existing approaches, relying on manual orchestration or heuristic-based patches, often struggle with poor generalization and fragme…
+
+</details>
+
+---
+
+## [MemFly: On-the-Fly Memory Optimization via Information Bottleneck](https://arxiv.org/abs/2602.07885)
+*arXiv Artificial Intelligence*  
+Score: **0.40**  
+Published: 2026-02-10T05:00:00+00:00
+Tags: Memory-Optimization, Information-Theory, Agents, Efficiency
+
+Information-bottleneck framework for efficient memory management in long-horizon LLM agents. Applicable to resource-constrained computational workflows in physics simulations.
+
+<details>
+<summary>RSS summary</summary>
+
+arXiv:2602.07885v1 Announce Type: new Abstract: Long-term memory enables large language model agents to tackle complex tasks through historical interactions. However, existing frameworks encounter a fundamental dilemma between compressing redundant information efficiently and maintaining precise retrieval for downstream tasks. To bridge this gap, we propose MemFly, a framework grounded in information bottleneck principles that facilitates on-the-fly memory evolution for LLMs. Our approach minimi…
 
 </details>
 
