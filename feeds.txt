@@ -16,3 +16,4 @@ Computational Engineering | https://rss.arxiv.org/rss/cs.CE
 
 # scientific computing
 SIAM Journal on Scientific Computing | https://epubs.siam.org/action/showFeed?type=etoc&feed=rss&jc=sjoce3
+J Comp Phys | https://rss.sciencedirect.com/publication/science/00219991
