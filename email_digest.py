@@ -111,7 +111,8 @@ def send_email(html: str, subject: str):
     sender = os.environ["DIGEST_FROM"]
     recipient = os.environ["DIGEST_TO"]
     host = os.environ["SMTP_HOST"]
-    port = int(os.environ.get("SMTP_PORT", "587"))
+    raw_port = os.environ.get("SMTP_PORT")
+    port = int(raw_port) if raw_port and raw_port.strip() else 587
     username = os.environ["SMTP_USERNAME"]
     password = os.environ["SMTP_PASSWORD"]
 
