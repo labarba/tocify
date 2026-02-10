@@ -18,7 +18,6 @@ If it is primarily theoretical work without an applied computational component,
 - computational fluid dynamics
 - scientific machine learnig
 - CFD
-- vortex methods
 - viscous vortical flows
 - high-Reynolds number flows
 - isotropic turbulence
