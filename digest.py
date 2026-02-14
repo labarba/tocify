@@ -10,11 +10,11 @@ from anthropic import Anthropic, APIStatusError, APIResponseValidationError, API
 # ---- config (env-tweakable) ----
 MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5")
 MAX_ITEMS_PER_FEED = int(os.getenv("MAX_ITEMS_PER_FEED", "50"))
-MAX_TOTAL_ITEMS = int(os.getenv("MAX_TOTAL_ITEMS", "400"))
+MAX_TOTAL_ITEMS = int(os.getenv("MAX_TOTAL_ITEMS", "600"))
 LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
 INTERESTS_MAX_CHARS = int(os.getenv("INTERESTS_MAX_CHARS", "3000"))
 SUMMARY_MAX_CHARS = int(os.getenv("SUMMARY_MAX_CHARS", "500"))
-PREFILTER_KEEP_TOP = int(os.getenv("PREFILTER_KEEP_TOP", "200"))
+PREFILTER_KEEP_TOP = int(os.getenv("PREFILTER_KEEP_TOP", "300"))
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", "50"))
 MIN_SCORE_READ = float(os.getenv("MIN_SCORE_READ", "0.65"))
 MAX_RETURNED = int(os.getenv("MAX_RETURNED", "40"))
@@ -103,14 +103,32 @@ def section(md: str, heading: str) -> str:
 
 def parse_interests_md(md: str) -> dict:
     keywords = []
-    for line in section(md, "Keywords").splitlines():
-        line = re.sub(r"^[\-\*\+]\s+", "", line.strip())
-        if line:
-            keywords.append(line)
+    # Extract all bullet points from the Keywords section (including subsections)
+    raw_keywords = section(md, "Keywords")
+    for line in raw_keywords.splitlines():
+        line_s = line.strip()
+        if line_s.startswith("#"):
+            continue # ignore subheadings
+        line_clean = re.sub(r"^[\-\*\+]\s+", "", line_s)
+        if line_clean:
+            keywords.append(line_clean)
+            
+    negative = []
+    raw_negative = section(md, "Negative Interests (Exclude)")
+    for line in raw_negative.splitlines():
+        line_clean = re.sub(r"^[\-\*\+]\s+", "", line.strip())
+        if line_clean:
+            negative.append(line_clean)
+
     narrative = section(md, "Narrative").strip()
     if len(narrative) > INTERESTS_MAX_CHARS:
         narrative = narrative[:INTERESTS_MAX_CHARS] + "…"
-    return {"keywords": keywords[:200], "narrative": narrative}
+        
+    return {
+        "keywords": keywords[:300], # Bumped limit for better coverage
+        "negative": negative,
+        "narrative": narrative
+    }
 
 
 # ---- rss ----
@@ -203,6 +221,7 @@ def call_claude_triage(client: Anthropic, interests: dict, items: list[dict]) ->
     prompt = (
         template
         .replace("{{KEYWORDS}}", json.dumps(interests["keywords"], ensure_ascii=False))
+        .replace("{{NEGATIVE}}", json.dumps(interests.get("negative", []), ensure_ascii=False))
         .replace("{{NARRATIVE}}", interests["narrative"])
         .replace("{{ITEMS}}", json.dumps(lean_items, ensure_ascii=False))
     )

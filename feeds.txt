@@ -1,36 +1,47 @@
-# general journals
-Nature | http://www.nature.com/nature/current_issue/rss
-Scientific Reports | https://www.nature.com/srep.rss
-Science | https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science
-Science Advances | https://www.science.org/content/page/email-alerts-and-rss-feeds
-PNAS | https://www.pnas.org/rss/Physics.xml
+# [General] Core Scientific Journals
+[Core] Nature | http://www.nature.com/nature/current_issue/rss
+[Core] Scientific Reports | https://www.nature.com/srep.rss
+[Core] Science | https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science
+[Core] Science Advances | https://www.science.org/content/page/email-alerts-and-rss-feeds
+[Physics] PNAS (Physics) | https://www.pnas.org/rss/Physics.xml
 
-# plasma physics & engineering
-Journal of Plasma Physics | https://www.cambridge.org/core/rss/product/id/79493630A5844009219356672323D19E
-Physics of Plasmas | https://pubs.aip.org/aip/pop/rss
-IEEE Transactions on Plasma Science | https://ieeexplore.ieee.org/rss/TOC27.XML
-Journal of Propulsion and Power | https://arc.aiaa.org/action/showFeed?type=etoc&feed=rss&jc=jpp
-Plasma Sources Science and Technology | https://iopscience.iop.org/journal/0963-0252/rss
+# [Plasma] Plasma Physics & Engineering
+[Plasma] Journal of Plasma Physics | https://www.cambridge.org/core/rss/product/id/79493630A5844009219356672323D19E
+[Plasma] Physics of Plasmas | https://pubs.aip.org/aip/pop/rss
+[Plasma] IEEE Transactions on Plasma Science | https://ieeexplore.ieee.org/rss/TOC27.XML
+[Propulsion] Journal of Propulsion and Power | https://arc.aiaa.org/action/showFeed?type=etoc&feed=rss&jc=jpp
+[Plasma] Plasma Sources Science and Technology | https://iopscience.iop.org/journal/0963-0252/rss
+[Plasma] Plasma Physics and Controlled Fusion | https://iopscience.iop.org/journal/0741-3335/rss
+[Plasma] Physical Review E (Plasma) | https://journals.aps.org/pre/rss/physics.plasm-ph
+[Fusion] Nuclear Fusion | https://iopscience.iop.org/journal/0029-5515/rss
 
-# computational & multi-physics
-Journal of Computational Physics | https://www.journals.elsevier.com/journal-of-computational-physics/rss
-Computer Physics Communications | https://www.journals.elsevier.com/computer-physics-communications/rss
-Journal of Scientific Computing | https://www.springer.com/journal/10915/rss
-Applied Mathematical Modelling | https://www.journals.elsevier.com/applied-mathematical-modelling/rss
+# [Comp] Computational & Multi-physics
+[Comp] Journal of Computational Physics | https://www.journals.elsevier.com/journal-of-computational-physics/rss
+[Comp] Computer Physics Communications | https://www.journals.elsevier.com/computer-physics-communications/rss
+[Comp] Journal of Scientific Computing | https://www.springer.com/journal/10915/rss
+[Comp] Applied Mathematical Modelling | https://www.journals.elsevier.com/applied-mathematical-modelling/rss
+[Comp] SIAM Journal on Scientific Computing | https://epubs.siam.org/action/showFeed?type=etoc&feed=rss&jc=sjoce3
+[Fluids] Journal of Fluid Mechanics | https://www.cambridge.org/core/rss/product/id/79493630A5844009219356672323D19E
 
-# aerospace & space technology
-AIAA Journal | https://arc.aiaa.org/action/showFeed?type=etoc&feed=rss&jc=aiaaj
-Journal of Spacecraft and Rockets | https://arc.aiaa.org/action/showFeed?type=etoc&feed=rss&jc=jsr
-Aerospace Science and Technology | https://www.journals.elsevier.com/aerospace-science-and-technology/rss
-Acta Astronautica | https://www.journals.elsevier.com/acta-astronautica/rss
+# [Aero] Aerospace & Space Technology
+[Aero] AIAA Journal | https://arc.aiaa.org/action/showFeed?type=etoc&feed=rss&jc=aiaaj
+[Aero] Journal of Spacecraft and Rockets | https://arc.aiaa.org/action/showFeed?type=etoc&feed=rss&jc=jsr
+[Aero] Aerospace Science and Technology | https://www.journals.elsevier.com/aerospace-science-and-technology/rss
+[Aero] Acta Astronautica | https://www.journals.elsevier.com/acta-astronautica/rss
 
-# AI, ML & advanced computing
-Nature Machine Intelligence | https://www.nature.com/natmachintell.rss
-Nature Computational Science | https://www.nature.com/natcomputsci.rss
-Journal of Machine Learning Research | http://www.jmlr.org/jmlr.xml
-AI Magazine | https://ojs.aaai.org/index.php/aimagazine/gateway/plugin/WebFeedGatewayPlugin/rss2
+# [AI] AI, ML & Advanced Computing
+[AI] Nature Machine Intelligence | https://www.nature.com/natmachintell.rss
+[AI] Nature Computational Science | https://www.nature.com/natcomputsci.rss
+[AI] AI Magazine | https://ojs.aaai.org/index.php/aimagazine/gateway/plugin/WebFeedGatewayPlugin/rss2
+[AI] ML: Science and Technology (IOP) | https://iopscience.iop.org/journal/2632-2153/rss
+[AI] Journal of Artificial Intelligence Research | https://jair.org/index.php/jair/gateway/plugin/WebFeedGatewayPlugin/rss
 
-# preprints (MHD, Plasma, and AI)
-arXiv Plasma Physics | https://arxiv.org/rss/physics.plasm-ph
-arXiv Computational Physics | https://arxiv.org/rss/physics.comp-ph
-arXiv Artificial Intelligence | https://arxiv.org/rss/cs.AI
+# [ArXiv] Preprints (MHD, Plasma, and AI)
+[ArXiv] Plasma Physics | https://arxiv.org/rss/physics.plasm-ph
+[ArXiv] Computational Physics | https://arxiv.org/rss/physics.comp-ph
+[ArXiv] Artificial Intelligence | https://arxiv.org/rss/cs.AI
+[ArXiv] Machine Learning (cs.LG) | https://rss.arxiv.org/rss/cs.LG
+[ArXiv] Multi-Agent Systems (cs.MA) | https://rss.arxiv.org/rss/cs.MA
+[ArXiv] Space Physics | https://arxiv.org/rss/physics.space-ph
+[ArXiv] Fluid Dynamics | https://rss.arxiv.org/rss/physics.flu-dyn
+[ArXiv] Robotics | https://rss.arxiv.org/rss/cs.RO
