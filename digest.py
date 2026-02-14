@@ -367,6 +367,11 @@ def main():
         f.write(md)
     print("Wrote digest.md")
 
+    # Export structured data for the new email generator
+    with open("digest.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+    print("Wrote digest.json")
+
 
 if __name__ == "__main__":
     main()
