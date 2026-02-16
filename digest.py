@@ -417,6 +417,22 @@ def main():
         json.dump(result, f, ensure_ascii=False, indent=2)
     print("Wrote digest.json")
 
+    # Export feed health as a standalone log
+    feed_log = {
+        "week_of": result["week_of"],
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "summary": {
+            "total": len(feed_statuses),
+            "ok": sum(1 for f in feed_statuses if f["status"] == "ok"),
+            "empty": sum(1 for f in feed_statuses if f["status"] == "empty"),
+            "error": sum(1 for f in feed_statuses if f["status"] == "error"),
+        },
+        "feeds": feed_statuses,
+    }
+    with open("feed_health.json", "w", encoding="utf-8") as f:
+        json.dump(feed_log, f, ensure_ascii=False, indent=2)
+    print("Wrote feed_health.json")
+
 
 if __name__ == "__main__":
     main()

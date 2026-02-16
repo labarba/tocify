@@ -22,72 +22,6 @@ def md_to_html_snippet(text: str) -> str:
     # but for notes/why keeping <p> is usually fine or safer.
     return html
 
-def generate_feed_health_html(feed_statuses: list) -> str:
-    if not feed_statuses:
-        return ""
-
-    total = len(feed_statuses)
-    ok = [f for f in feed_statuses if f["status"] == "ok"]
-    empty = [f for f in feed_statuses if f["status"] == "empty"]
-    errors = [f for f in feed_statuses if f["status"] == "error"]
-
-    # Only show the section if there's something worth flagging
-    has_issues = errors or empty
-    if not has_issues:
-        return ""
-
-    rows_html = ""
-
-    if errors:
-        rows_html += '<tr><td colspan="3" style="padding: 6px 0 2px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8;">Inaccessible</td></tr>'
-        for f in errors:
-            name = f.get("name", "Unknown")
-            url = f.get("url", "")
-            err = f.get("error", "unknown error")
-            rows_html += f"""
-            <tr>
-                <td style="padding: 5px 8px 5px 0; vertical-align: middle;">
-                    <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ef4444; margin-right:6px;"></span>
-                    <strong style="font-size:13px; color:#0f172a;">{name}</strong>
-                </td>
-                <td style="padding: 5px 8px; font-size:12px; color:#64748b; vertical-align: middle;">{err}</td>
-                <td style="padding: 5px 0 5px 8px; font-size:11px; color:#94a3b8; word-break:break-all; vertical-align: middle;">{url}</td>
-            </tr>"""
-
-    if empty:
-        rows_html += '<tr><td colspan="3" style="padding: 10px 0 2px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8;">No Entries Returned</td></tr>'
-        for f in empty:
-            name = f.get("name", "Unknown")
-            url = f.get("url", "")
-            rows_html += f"""
-            <tr>
-                <td style="padding: 5px 8px 5px 0; vertical-align: middle;">
-                    <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f59e0b; margin-right:6px;"></span>
-                    <strong style="font-size:13px; color:#0f172a;">{name}</strong>
-                </td>
-                <td style="padding: 5px 8px; font-size:12px; color:#64748b; vertical-align: middle;">No entries in feed</td>
-                <td style="padding: 5px 0 5px 8px; font-size:11px; color:#94a3b8; word-break:break-all; vertical-align: middle;">{url}</td>
-            </tr>"""
-
-    summary_color = "#ef4444" if errors else "#f59e0b"
-    summary_text = f"{len(ok)}/{total} feeds active"
-    if errors:
-        summary_text += f" &nbsp;·&nbsp; {len(errors)} error{'s' if len(errors) != 1 else ''}"
-    if empty:
-        summary_text += f" &nbsp;·&nbsp; {len(empty)} empty"
-
-    return f"""
-    <div style="background:#ffffff; border-radius:16px; padding:24px; margin:0 10px 20px 10px; border:1px solid #f1f5f9; box-shadow:0 4px 6px -1px rgba(0,0,0,.05);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-            <span style="font-size:13px; font-weight:700; color:#0f172a;">Feed Health</span>
-            <span style="font-size:12px; font-weight:600; color:{summary_color}; background:{summary_color}1a; padding:3px 10px; border-radius:999px;">{summary_text}</span>
-        </div>
-        <table style="width:100%; border-collapse:collapse;">
-            {rows_html}
-        </table>
-    </div>
-    """
-
 def generate_html(data):
     # Parse and format date
     raw_date = data.get("week_of", "Unknown Date")
@@ -103,7 +37,6 @@ def generate_html(data):
     notes_html = md_to_html_snippet(raw_notes)
     
     items = data.get("ranked", [])
-    feed_health_html = generate_feed_health_html(data.get("feed_status", []))
 
     html_items = ""
     for item in items:
@@ -367,9 +300,6 @@ def generate_html(data):
                 
                 <!-- FEED -->
                 {html_items}
-
-                <!-- FEED HEALTH -->
-                {feed_health_html}
 
                 <!-- FOOTER -->
                 <div class="footer">
