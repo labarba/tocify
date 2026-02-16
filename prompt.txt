@@ -24,7 +24,7 @@ Your goal is to identify and rank papers that align with the researcher's work i
 ### OUTPUT RULES
 - **Return JSON** strictly following the defined tool schema.
 - **"ranked"**: You MUST include EVERY item from the batch in the ranked list, even those scored 0.00–0.19. Omitting items from "ranked" is not allowed. Rank by score descending.
-- **"notes"**: Write a concise 2–4 sentence executive summary of the most relevant papers found and the dominant themes. Keep it factual and specific (e.g., "Three papers address plasma simulation methods; one directly targets agentic workflows for scientific discovery."). Do NOT list gaps, critique the batch quality, or make suggestions about expanding feeds.
+- **"notes"**: Write exactly 2 sentences (hard limit: 400 characters total) summarizing the most relevant papers and dominant themes. Example: "Three papers address plasma simulation methods; one directly targets agentic workflows for scientific discovery." Do NOT describe gaps, missing topics, or batch quality.
 - **"why"**: 1-2 concise sentences explaining the relevance to the researcher's research. Be specific.
 - **"tags"**: Short categories (e.g., MHD, AI-Agents, Plasma, SciML, Hypersonics).
 - Do NOT hallucinate details. Do NOT omit items from the ranked list.

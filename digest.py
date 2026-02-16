@@ -25,7 +25,8 @@ SCHEMA = {
     "additionalProperties": False,
     "properties": {
         "week_of": {"type": "string"},
-        "notes": {"type": "string"},
+        # ranked BEFORE notes so Claude fills articles first and can't exhaust
+        # the token budget on a verbose summary before returning any items.
         "ranked": {
             "type": "array",
             "items": {
@@ -44,8 +45,9 @@ SCHEMA = {
                 "required": ["id", "title", "link", "source", "published_utc", "score", "why", "tags"],
             },
         },
+        "notes": {"type": "string", "maxLength": 400},
     },
-    "required": ["week_of", "notes", "ranked"],
+    "required": ["week_of", "ranked", "notes"],
 }
 
 
