@@ -1,11 +1,11 @@
 {
   "week_of": "2026-02-16",
-  "generated_at": "2026-02-16T16:19:18.569261+00:00",
+  "generated_at": "2026-02-16T16:41:36.557374+00:00",
   "summary": {
     "total": 41,
-    "ok": 35,
+    "ok": 36,
     "empty": 0,
-    "error": 6
+    "error": 5
   },
   "feeds": [
     {
@@ -195,7 +195,7 @@
       "url": "https://ojs.aaai.org/index.php/aimagazine/gateway/plugin/WebFeedGatewayPlugin/rss2",
       "status": "error",
       "items_found": 0,
-      "error": "text/html; charset=iso-8859-1 is not an XML media type"
+      "error": "text/html; charset=UTF-8 is not an XML media type"
     },
     {
       "name": "[AI] Pattern Recognition",
@@ -207,9 +207,9 @@
     {
       "name": "[AI] Journal of Artificial Intelligence Research",
       "url": "https://jair.org/index.php/jair/gateway/plugin/WebFeedGatewayPlugin/rss",
-      "status": "error",
-      "items_found": 0,
-      "error": "text/html; charset=iso-8859-1 is not an XML media type"
+      "status": "ok",
+      "items_found": 1,
+      "error": ""
     },
     {
       "name": "[ArXiv] Plasma Physics",

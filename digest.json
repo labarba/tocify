@@ -1,7 +1,2822 @@
 {
   "week_of": "2026-02-16",
-  "notes": "This batch spans 47 papers across plasma physics, computational physics, and AI/agents. Three papers directly address plasma simulation methods using modern numerical frameworks: tensor network compression for Vlasov-Poisson (two duplicates), structure-preserving discrete gradients for kinetic systems, and moment closure models—all relevant to MHD solver development. One paper on MHD instabilities in tokamak disruption mitigation is moderately relevant. Several papers on agents (web browsing, inventory control, reasoning models, skill benchmarking) provide insights into agentic R&D automation patterns, though without domain-specific scientific application. The batch lacks papers directly addressing applied MPD thruster physics or non-ideal MHD effects in propulsion; most plasma papers focus on fusion confinement, astrophysical shocks, or fundamental kinetic theory without propulsion context. One paper directly addresses agentic workflows for physics simulation code generation with self-reflection mechanisms; another presents a PINN-based approach to the Nirenberg problem, demonstrating physics-informed neural network utility. The batch is dominated by general-purpose AI (LLMs, RL, diffusion models) and machine learning fundamentals with minimal overlap to MHD, plasma propulsion, or computational physics. No papers on thruster design, non-ideal MHD effects, or spacecraft control systems were identified. This batch is heavily dominated by general machine learning and multi-agen",
-  "ranked": [],
+  "notes": "Two papers on tensor-network-accelerated Vlasov-Poisson and structure-preserving discrete-gradient methods scored highest, targeting computational efficiency in kinetic plasma simulation. Five additional papers address MHD instabilities, moment models, and warm dense matter—all relevant to plasma physics fundamentals, but none directly target applied-field MPD thrusters, non-ideal MHD effects, or agentic R&D workflows. Remaining batch skews toward quantum chemistry, molecular kinetics, and materials processing with minimal direct relevance. One paper on aerospace optimal control and one on lattice Boltzmann multiphase flow methods show modest relevance to computational methods. Multiple papers on LLM agents and agentic workflows (reasoning adaptation, trajectory optimization, skill benchmarking) align with the R&D acceleration pillar, though none explicitly address scientific discovery in plasma or MHD contexts. One paper stands out: \"Perceptual Self-Reflection in Agentic Physics Simulation Code Generation\" (0.88) directly targets agentic automation for physics code—core to R&D acceleration. Secondary themes include CUDA optimization (0.72) for HPC infrastructure and modular agent architectures (0.70) for scientific workflow design. Most remaining papers focus on RL, LLM evaluation, or business applications disconnected from MHD, plasma, or aerospace research. Two papers demonstrate strong PINN-based computational approaches and RL-driven design automation in physical systems",
+  "ranked": [
+    {
+      "id": "64bf348afdd92572139b67665a534517bc28888a",
+      "title": "Perceptual Self-Reflection in Agentic Physics Simulation Code Generation",
+      "link": "https://arxiv.org/abs/2602.12311",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.88,
+      "why": "Directly addresses agentic R&D pipelines for physics simulation code generation with automated self-correction and multi-agent frameworks. Bridges LLM-driven automation with computational physics workflows.",
+      "tags": [
+        "AI-Agents",
+        "Physics-Simulation",
+        "Code-Generation",
+        "Automated-Workflows"
+      ]
+    },
+    {
+      "id": "335c7f22264a914b9a7bdb8ada122104eeeb054d",
+      "title": "A Machine Learning Approach to the Nirenberg Problem",
+      "link": "https://arxiv.org/abs/2602.12368",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.78,
+      "why": "PINN-based approach to a classical differential geometry problem demonstrates mesh-free physics-informed neural networks applicable to complex multi-scale phenomena. Relevant to SciML stack for computational physics problems.",
+      "tags": [
+        "SciML",
+        "PINNs",
+        "Computational Physics",
+        "Neural Networks"
+      ]
+    },
+    {
+      "id": "246b8d57eee7589416122a9bf63604cc6b4344ee",
+      "title": "Variability of MHD Instabilities in Benign Termination of High-Current Runaway Electron Beams in the JET and DIII-D Tokamaks",
+      "link": "https://arxiv.org/abs/2601.02262",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.75,
+      "why": "Directly addresses MHD instabilities and plasma confinement dynamics in fusion tokamaks. Relevant to understanding nonlinear MHD effects and disruption mitigation, though not focused on propulsion applications.",
+      "tags": [
+        "MHD",
+        "Plasma",
+        "Tokamak",
+        "Instabilities"
+      ]
+    },
+    {
+      "id": "da58ca94d7f352498702ccd0099ef59078e95c82",
+      "title": "Tensor Network Compression for Fully Spectral Vlasov-Poisson Simulation",
+      "link": "https://arxiv.org/abs/2602.13092",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.73,
+      "why": "Presents advanced computational methods for kinetic plasma simulation using tensor networks. Relevant to efficient numerical solvers for plasma dynamics, complementing the researcher's interest in computational plasma physics methods.",
+      "tags": [
+        "Plasma",
+        "Computational Methods",
+        "Vlasov-Poisson",
+        "Numerical Solvers"
+      ]
+    },
+    {
+      "id": "d1eb27746bb5213f960b64f4ae5ae169c91d4e4e",
+      "title": "Tensor Network Compression for Fully Spectral Vlasov-Poisson Simulation",
+      "link": "https://arxiv.org/abs/2602.13092",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.73,
+      "why": "Presents advanced computational methods for kinetic plasma simulation using tensor networks. Relevant to efficient numerical solvers for plasma dynamics, complementing the researcher's interest in computational plasma physics methods.",
+      "tags": [
+        "Plasma",
+        "Computational Methods",
+        "Vlasov-Poisson",
+        "Numerical Solvers"
+      ]
+    },
+    {
+      "id": "992920f97a5154ff8515899fef83d6ddfa22e376",
+      "title": "Structure preservation using discrete gradients in the Vlasov-Poisson-Landau system",
+      "link": "https://arxiv.org/abs/2602.13068",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.72,
+      "why": "Addresses structure-preserving numerical schemes for kinetic plasma equations with conservation properties. Relevant to developing robust solvers for collisional plasma transport and kinetic effects in complex plasma systems.",
+      "tags": [
+        "Plasma",
+        "Numerical Methods",
+        "Conservation Laws",
+        "Kinetic Theory"
+      ]
+    },
+    {
+      "id": "9ca884b16a61235a625a7a16d97206b8b6cb9205",
+      "title": "Optimal Take-off under Fuzzy Clearances",
+      "link": "https://arxiv.org/abs/2602.13166",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.72,
+      "why": "Addresses optimal control for unmanned aircraft with adaptive constraint handling and fuzzy logic—relevant to aerospace vehicle autonomy and control systems applicable to plasma propulsion vehicle dynamics.",
+      "tags": [
+        "Aerospace",
+        "Optimal Control",
+        "Fuzzy Logic",
+        "Autonomous Systems"
+      ]
+    },
+    {
+      "id": "d1fbc736ef0f1e9f86c3a4b1a066c1df2ea06486",
+      "title": "OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization",
+      "link": "https://arxiv.org/abs/2602.12305",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.72,
+      "why": "Relevant to computational physics acceleration via high-performance CUDA kernel synthesis and optimization. Maps to scientific computing infrastructure needed for large-scale MHD simulations.",
+      "tags": [
+        "CUDA",
+        "Program-Synthesis",
+        "Optimization",
+        "High-Performance-Computing"
+      ]
+    },
+    {
+      "id": "95b64011309d1b851a20eefab1292cfbcc3a7386",
+      "title": "AstRL: Analog and Mixed-Signal Circuit Synthesis with Deep Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2602.12402",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.72,
+      "why": "Demonstrates RL-driven optimization of physical systems with non-differentiable constraints and diverse design spaces. Relevant to agentic R&D workflows and automated design exploration for physical systems.",
+      "tags": [
+        "AI-Agents",
+        "RL",
+        "Hardware Design",
+        "Automated Optimization"
+      ]
+    },
+    {
+      "id": "3e90db46a229ab06e427983a01698d7fc9449942",
+      "title": "OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization",
+      "link": "https://arxiv.org/abs/2602.12305",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.72,
+      "why": "Agentic framework combining LLMs with systematic exploration for high-performance kernel optimization. Relevant to R&D acceleration through automated synthesis and verification of computational choices.",
+      "tags": [
+        "AI-Agents",
+        "Code-Generation",
+        "Optimization",
+        "Computational-Science"
+      ]
+    },
+    {
+      "id": "9a6fe2cbd054abd996166a4617f49808cdbaf387",
+      "title": "Physics-Informed Transformer operator for the prediction of three-dimensional turbulence",
+      "link": "https://arxiv.org/abs/2601.19351",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.72,
+      "why": "Physics-informed neural operators for 3D turbulence prediction align with SciML methods applicable to MHD plasma simulation. Transformer architecture for operator learning demonstrates modern ML approaches for complex PDE systems.",
+      "tags": [
+        "SciML",
+        "Physics-Informed",
+        "Turbulence",
+        "Neural Operators"
+      ]
+    },
+    {
+      "id": "6e04a1770bae9ae1b49870f36e9b3eed23f04aa9",
+      "title": "Safe Reinforcement Learning via Recovery-based Shielding with Gaussian Process Dynamics Models",
+      "link": "https://arxiv.org/abs/2602.12444",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.71,
+      "why": "Integrates learned dynamics models with control policies for safety-critical systems. Relevant to spacecraft control and real-world deployment of RL-based agents in physical environments.",
+      "tags": [
+        "RL",
+        "Control",
+        "Gaussian Processes",
+        "Safety"
+      ]
+    },
+    {
+      "id": "f0e7db930b2a5222d45365e4fad144b84c4db34c",
+      "title": "Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward",
+      "link": "https://arxiv.org/abs/2602.12430",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.7,
+      "why": "Explores modular, skill-equipped agent architectures that enable dynamic capability extension. Relevant to designing composable agentic systems for scientific research automation.",
+      "tags": [
+        "AI-Agents",
+        "LLM-Architecture",
+        "Modular-Systems",
+        "Autonomous-Research"
+      ]
+    },
+    {
+      "id": "313b01fad766aad057c9ec4f67733323157c3b3c",
+      "title": "Roadmap for warm dense matter physics",
+      "link": "https://arxiv.org/abs/2505.02494",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.68,
+      "why": "Comprehensive review of warm dense matter bridging high-energy-density physics and strongly coupled plasmas. Relevant to understanding high-temperature, high-pressure plasma regimes applicable to advanced propulsion concepts.",
+      "tags": [
+        "Plasma",
+        "High Energy Density",
+        "Computational Physics"
+      ]
+    },
+    {
+      "id": "40e84df822343179469b345a1d785f486f9d4cc8",
+      "title": "A Corrected Open Boundary Framework for Lattice Boltzmann Immiscible Pseudopotential Models",
+      "link": "https://arxiv.org/abs/2512.12934",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.68,
+      "why": "Advances computational methods for multiphase flow simulation via lattice Boltzmann methods—relevant to plasma-fluid interaction modeling and computational mesh techniques for complex boundary conditions.",
+      "tags": [
+        "Computational Physics",
+        "Lattice Boltzmann",
+        "Multiphase Flow",
+        "Numerical Methods"
+      ]
+    },
+    {
+      "id": "3ba418d7bfed447a007f071912967f85c4c42df2",
+      "title": "AstRL: Analog and Mixed-Signal Circuit Synthesis with Deep Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2602.12402",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.68,
+      "why": "Demonstrates RL for automated synthesis in complex design spaces (analog circuits). Conceptually transferable to parameter optimization in non-ideal MHD simulators.",
+      "tags": [
+        "Reinforcement-Learning",
+        "Design-Automation",
+        "Optimization",
+        "Circuit-Synthesis"
+      ]
+    },
+    {
+      "id": "504cf5f08adec1967995aa7d50b9018324010455",
+      "title": "MASPRM: Multi-Agent System Process Reward Model",
+      "link": "https://arxiv.org/abs/2510.24803",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.68,
+      "why": "Demonstrates agentic inference-time control and search guidance for multi-agent coordination. Applicable to R&D pipelines requiring selective computation and quality improvement.",
+      "tags": [
+        "AI-Agents",
+        "MARL",
+        "Inference-Optimization"
+      ]
+    },
+    {
+      "id": "bd7071acf86d97e9f5039e3beb34ff0d5f8914fc",
+      "title": "Latent-space variational data assimilation in two-dimensional turbulence",
+      "link": "https://arxiv.org/abs/2512.15470",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.68,
+      "why": "Data assimilation in turbulent systems relates to computational methods for inferring flow states from limited observations; relevant to plasma state estimation in MHD simulations.",
+      "tags": [
+        "Data Assimilation",
+        "Turbulence",
+        "Computational Fluid Dynamics"
+      ]
+    },
+    {
+      "id": "fe5342693d3674601719ecf38b8682509aa2bcb7",
+      "title": "Agentic AI for Robot Control: Flexible but still Fragile",
+      "link": "https://arxiv.org/abs/2602.13081",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.68,
+      "why": "Demonstrates agentic control systems with language models planning and executing robot tasks. Relevant to agentic R&D pipelines for autonomous decision-making, though not directly applied to MHD or plasma domains.",
+      "tags": [
+        "AI-Agents",
+        "Robot-Control",
+        "Planning",
+        "Hierarchical-Systems"
+      ]
+    },
+    {
+      "id": "e4ecbeeb9b1acf3e1e199ea3f08b57aee088efbb",
+      "title": "Long-Pulse Fast Ignition in MagLIF",
+      "link": "https://arxiv.org/abs/2602.12673",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.67,
+      "why": "Investigates magnetized liner inertial fusion with strong magnetic confinement effects. Relevant to understanding high-field MHD dynamics and plasma heating under extreme conditions.",
+      "tags": [
+        "MHD",
+        "Plasma",
+        "Fusion",
+        "High Magnetic Fields"
+      ]
+    },
+    {
+      "id": "fe3de4c48dff035c8a866329316edece582d44a4",
+      "title": "Exact moment models for conservation laws in phase space",
+      "link": "https://arxiv.org/abs/2602.13180",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.66,
+      "why": "Develops moment-based reduced models for kinetic plasma transport with exact conservation. Applicable to bridging kinetic and fluid descriptions in plasma simulation frameworks.",
+      "tags": [
+        "Plasma",
+        "Kinetic Theory",
+        "Moment Methods",
+        "Conservation Laws"
+      ]
+    },
+    {
+      "id": "5e9c44ec3f83816e3a5e256e72197a9735441bcf",
+      "title": "UniManip: General-Purpose Zero-Shot Robotic Manipulation with Agentic Operational Graph",
+      "link": "https://arxiv.org/abs/2602.13086",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.66,
+      "why": "Bridges high-level semantic intent with low-level physical interaction using agentic graphs and VLA models. Relevant methodology for hierarchical autonomous systems and agent coordination, transferable to propulsion/thruster control.",
+      "tags": [
+        "AI-Agents",
+        "VLA-Models",
+        "Hierarchical-Control",
+        "Zero-Shot"
+      ]
+    },
+    {
+      "id": "a6c1c479df9601e0e03b4f87ac89ef0e0f8956cc",
+      "title": "Quantitative 3D non-linear simulations of shattered pellet injection in ASDEX Upgrade using JOREK",
+      "link": "https://arxiv.org/abs/2602.12813",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.65,
+      "why": "Demonstrates 3D nonlinear MHD simulations of disruption mitigation in tokamaks using JOREK code. Relevant to advanced MHD simulation techniques for complex plasma dynamics.",
+      "tags": [
+        "MHD",
+        "Plasma",
+        "Tokamak",
+        "Simulation"
+      ]
+    },
+    {
+      "id": "ae1d2b8a102fc7e4bcd256e8812e4b29e87e1b53",
+      "title": "Odd Radio Circles Modeled by Shock-Bubble Interactions",
+      "link": "https://arxiv.org/abs/2602.12479",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.65,
+      "why": "Uses 3D MHD simulations to model astrophysical shock interactions. Relevant to advanced MHD simulation methodology and shock physics, though application domain differs from propulsion.",
+      "tags": [
+        "MHD",
+        "Shock Physics",
+        "Computational Physics"
+      ]
+    },
+    {
+      "id": "641d5615a259b5e4d5ab435b6858bec18a694c5c",
+      "title": "Think Fast and Slow: Step-Level Cognitive Depth Adaptation for LLM Agents",
+      "link": "https://arxiv.org/abs/2602.12662",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.65,
+      "why": "Proposes adaptive reasoning depth for LLM agents in multi-turn decision-making—directly applicable to agentic R&D pipelines that require variable cognitive effort for hypothesis generation and experimental design.",
+      "tags": [
+        "AI-Agents",
+        "LLM",
+        "Reasoning",
+        "Autonomous Decision-Making"
+      ]
+    },
+    {
+      "id": "371190b34c5b8369f0f2869f731b682cf5d16c92",
+      "title": "Safe Reinforcement Learning via Recovery-based Shielding with Gaussian Process Dynamics Models",
+      "link": "https://arxiv.org/abs/2602.12444",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.65,
+      "why": "Combines RL with Gaussian process surrogate models for safe control in non-linear dynamical systems. Relevant to plasma propulsion control under uncertainty.",
+      "tags": [
+        "Reinforcement-Learning",
+        "Gaussian-Processes",
+        "Dynamics-Modeling",
+        "Safe-Control"
+      ]
+    },
+    {
+      "id": "d8a4953af34685f79e82b4db10784855c7f11dd8",
+      "title": "Intrinsic Credit Assignment for Long Horizon Interaction",
+      "link": "https://arxiv.org/abs/2602.12342",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.65,
+      "why": "Addresses long-horizon credit assignment in RL using language model beliefs for intermediate goal specification. Applicable to agentic workflows requiring multi-step reasoning in scientific discovery pipelines.",
+      "tags": [
+        "AI-Agents",
+        "RL",
+        "Credit Assignment",
+        "LLM"
+      ]
+    },
+    {
+      "id": "1bc4f2cd4d5571e8ff9b1d1dad58ff50ad7ee399",
+      "title": "WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2602.04634",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.65,
+      "why": "Addresses organizational capability via multi-agent width scaling for complex problem-solving. Relevant to agentic R&D workflows that distribute broad search across teams.",
+      "tags": [
+        "AI-Agents",
+        "MARL",
+        "Information-Seeking"
+      ]
+    },
+    {
+      "id": "a7e5083aaaf72d0b0475783cd2402b531eb3a01f",
+      "title": "An Oscillation-Free Real Fluid Quasi-Conservative Finite Volume Method for Transcritical and Phase-Change Flows",
+      "link": "https://arxiv.org/abs/2602.00658",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.65,
+      "why": "Quasi-conservative finite volume schemes for complex fluid flows with equations of state relate to numerical methods for high-density plasma and thruster plume modeling.",
+      "tags": [
+        "Finite Volume",
+        "Numerical Methods",
+        "Compressible Flows"
+      ]
+    },
+    {
+      "id": "c29c162536de0a4586081fb87d7a0afb5ff6e31a",
+      "title": "OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization",
+      "link": "https://arxiv.org/abs/2602.12305",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.64,
+      "why": "Addresses automated exploration of complex non-differentiable optimization spaces using language models and systematic verification. Applicable to R&D acceleration through automated code generation and performance tuning.",
+      "tags": [
+        "Program Synthesis",
+        "Optimization",
+        "Computational Efficiency",
+        "LLM"
+      ]
+    },
+    {
+      "id": "9a98dd17f21802e8ccb6dafe629fbe0e8bc6d048",
+      "title": "RLinf-Co: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models",
+      "link": "https://arxiv.org/abs/2602.12628",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.64,
+      "why": "Addresses closed-loop reinforcement learning and sim-to-real transfer for vision-language-action models. Relevant to bridging simulation validation and real-world deployment—critical for plasma thruster prototype iterations.",
+      "tags": [
+        "RL",
+        "Sim-to-Real",
+        "VLA-Models",
+        "Control"
+      ]
+    },
+    {
+      "id": "11666c5cf05082484d7213f52fa4c9fe0fbb658e",
+      "title": "WebClipper: Efficient Evolution of Web Agents with Graph-based Trajectory Pruning",
+      "link": "https://arxiv.org/abs/2602.12852",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.63,
+      "why": "Optimizes web agent efficiency through trajectory pruning and graph-based reasoning—applicable to agentic R&D workflows that require efficient exploration of scientific literature and experimental parameter spaces.",
+      "tags": [
+        "AI-Agents",
+        "Graph Methods",
+        "Agent Optimization",
+        "Information Retrieval"
+      ]
+    },
+    {
+      "id": "b22b445654c7bc72dee6ccbbae02e784ade37d71",
+      "title": "Steerable Vision-Language-Action Policies for Embodied Reasoning and Hierarchical Control",
+      "link": "https://arxiv.org/abs/2602.13193",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.63,
+      "why": "Combines VLMs with hierarchical control and semantic reasoning for robot tasks. Hierarchical abstraction approach aligns with potential layering of high-level thruster control commands and low-level plasma physics.",
+      "tags": [
+        "VLM",
+        "Hierarchical-Control",
+        "Embodied-AI",
+        "Reasoning"
+      ]
+    },
+    {
+      "id": "6f96456696b91343bea07b17142c7919fb41efa8",
+      "title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks",
+      "link": "https://arxiv.org/abs/2602.12670",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.62,
+      "why": "Establishes evaluation framework for agent skill transfer across domains—relevant to scaling agentic R&D systems that must generalize computational and experimental capabilities across diverse scientific tasks.",
+      "tags": [
+        "AI-Agents",
+        "Benchmarking",
+        "Skill Transfer",
+        "Task Generalization"
+      ]
+    },
+    {
+      "id": "89003997a3ee4e338b61e3324b0430be1b0a39f0",
+      "title": "Computationally sufficient statistics for Ising models",
+      "link": "https://arxiv.org/abs/2602.12449",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.62,
+      "why": "Computational approach to learning Gibbs distributions with partial observations relevant to statistical physics. Tangentially applicable to plasma state estimation in MHD contexts.",
+      "tags": [
+        "Statistical Physics",
+        "Computational Methods",
+        "Physics Simulation"
+      ]
+    },
+    {
+      "id": "2b5fdf6edca02b318bc26134a4c69bb5aed0654b",
+      "title": "A Corrected Open Boundary Framework for Lattice Boltzmann Immiscible Pseudopotential Models",
+      "link": "https://arxiv.org/abs/2512.12934",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.62,
+      "why": "Lattice Boltzmann methods for multiphase flows provide alternative computational paradigms applicable to plasma-fluid interaction simulation in certain regimes.",
+      "tags": [
+        "Lattice Boltzmann",
+        "Multiphase Flows",
+        "Numerical Simulation"
+      ]
+    },
+    {
+      "id": "848d1bea7a6a4350b7599bb34470095260d639db",
+      "title": "Gradient-Enhanced Partitioned Gaussian Processes for Real-Time Quadrotor Dynamics Modeling",
+      "link": "https://arxiv.org/abs/2602.12487",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.62,
+      "why": "Gaussian process surrogate modeling with state-space partitioning for real-time dynamics inference parallels SciML approaches for spacecraft control and trajectory optimization.",
+      "tags": [
+        "SciML",
+        "Surrogate Models",
+        "Aerospace",
+        "Control"
+      ]
+    },
+    {
+      "id": "7cc48e25a63e7d2a1916f62307ce70eaf2ce881a",
+      "title": "SafeFlowMPC: Predictive and Safe Trajectory Planning for Robot Manipulators with Learning-based Policies",
+      "link": "https://arxiv.org/abs/2602.12794",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.62,
+      "why": "Integrates learning-based policies with optimization-based predictive control for safety and interpretability. Relevant to constrained control synthesis for thruster systems requiring rigorous safety guarantees.",
+      "tags": [
+        "MPC",
+        "Learning-Based-Control",
+        "Safety",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "ae3518fd1365a8b51f1b3170f27dafe939708e1a",
+      "title": "Scaling Web Agent Training through Automatic Data Generation and Fine-grained Evaluation",
+      "link": "https://arxiv.org/abs/2602.12544",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.61,
+      "why": "Presents scalable training pipeline for agents with constraint-based progress evaluation—methodologically relevant to automating scientific discovery workflows in computational research.",
+      "tags": [
+        "AI-Agents",
+        "Data Generation",
+        "Training Pipelines",
+        "Evaluation Methods"
+      ]
+    },
+    {
+      "id": "8ec63bad831545b8456652470d09a182deae68c4",
+      "title": "Quantum-inspired space-time PDE solver and dynamic mode decomposition",
+      "link": "https://arxiv.org/abs/2510.21767",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.6,
+      "why": "Proposes efficient PDE solvers using quantum-inspired tensor methods to overcome dimensionality challenges. Potentially applicable to accelerating plasma/MHD simulations, though not directly demonstrated.",
+      "tags": [
+        "Computational Methods",
+        "PDE Solvers",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "b30482b5af9bec43c749a4e462976faae8ce449b",
+      "title": "Multi-Agent Model-Based Reinforcement Learning with Joint State-Action Learned Embeddings",
+      "link": "https://arxiv.org/abs/2602.12520",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.6,
+      "why": "Combines representation learning with world models for data-efficient multi-agent coordination. Techniques applicable to scientific simulation and control in complex physical systems.",
+      "tags": [
+        "MARL",
+        "World-Models",
+        "Representation-Learning"
+      ]
+    },
+    {
+      "id": "5e28e69ec7f748e2ea4414b6a10b2452ee631a8e",
+      "title": "An Autonomous, End-to-End, Convex-Based Framework for Close-Range Rendezvous Trajectory Design and Guidance with Hardware Testbed Validation",
+      "link": "https://arxiv.org/abs/2602.12421",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.6,
+      "why": "Autonomous trajectory design and real-time guidance for spacecraft rendezvous align with advanced spacecraft control and on-board optimization methods relevant to thruster-equipped vehicles.",
+      "tags": [
+        "Aerospace",
+        "Control",
+        "Trajectory Optimization",
+        "Real-Time Systems"
+      ]
+    },
+    {
+      "id": "166a22e759010d5eaa9f7f1012895da5db3ea02a",
+      "title": "Resonant Excitation of Surface Plasmon for Wakefield Acceleration by Beating GW Lasers on Smooth Cylindrical Surface",
+      "link": "https://arxiv.org/abs/2602.12789",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.59,
+      "why": "Studies plasma-assisted acceleration via laser-driven surface waves with PIC simulations. Related to plasma acceleration physics, though focused on optical rather than electromagnetic thruster regimes.",
+      "tags": [
+        "Plasma",
+        "Acceleration",
+        "Laser",
+        "PIC Simulation"
+      ]
+    },
+    {
+      "id": "abbe17bc30bef4ad6442e8698aeaf85ea60a8d8a",
+      "title": "Constrained PSO Six-Parameter Fuzzy PID Tuning Method for Balanced Optimization of Depth Tracking Performance in Underwater Vehicles",
+      "link": "https://arxiv.org/abs/2602.12700",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.59,
+      "why": "Applies constrained optimization (PSO) for real-time control tuning in fluid dynamics systems. Methodology transferable to thruster feedback control, though aquatic domain differs from plasma environment.",
+      "tags": [
+        "Control",
+        "Optimization",
+        "PSO",
+        "Fluid-Dynamics"
+      ]
+    },
+    {
+      "id": "165e65004b239aab7393eb86efa8105ab9fdd57b",
+      "title": "Role of the radial electric field in the confinement of energetic ions in the Wendelstein 7-X stellarator",
+      "link": "https://arxiv.org/abs/2602.12969",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.58,
+      "why": "Examines ion confinement physics in advanced magnetic geometries. Relevant to understanding plasma equilibrium and transport, but focused on stellarator fusion rather than propulsion applications.",
+      "tags": [
+        "Plasma",
+        "Confinement",
+        "Magnetic Geometry"
+      ]
+    },
+    {
+      "id": "93aef1630fb315a6f1fa17f0686721cb3c6526a3",
+      "title": "Why Deep Jacobian Spectra Separate: Depth-Induced Scaling and Singular-Vector Alignment",
+      "link": "https://arxiv.org/abs/2602.12384",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.58,
+      "why": "Theoretical understanding of deep neural network training dynamics. Foundational to understanding implicit bias in training neural network surrogates for physical systems.",
+      "tags": [
+        "Neural Networks",
+        "Theory",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "f33520ecb90ddee1eff7f6db9e85ab696a29c126",
+      "title": "High-dimensional Level Set Estimation with Trust Regions and Double Acquisition Functions",
+      "link": "https://arxiv.org/abs/2602.12391",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.58,
+      "why": "Active learning approach for high-dimensional classification relevant to design space exploration and uncertainty quantification in complex physical simulations.",
+      "tags": [
+        "Active Learning",
+        "Bayesian Optimization",
+        "Uncertainty Quantification"
+      ]
+    },
+    {
+      "id": "18c1da6ead6bd760768db2bedd90a4ed2b9ec6e3",
+      "title": "Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward",
+      "link": "https://arxiv.org/abs/2602.12430",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.58,
+      "why": "Formal treatment of modular, composable agent skills without retraining. Relevant to agentic R&D pipeline architecture and dynamic capability extension.",
+      "tags": [
+        "AI-Agents",
+        "LLM-Systems",
+        "Skill-Composition"
+      ]
+    },
+    {
+      "id": "9e2e53ed2ae97346e70b98ed7a127651c982b8ed",
+      "title": "Direct power spectral density estimation from structure functions without Fourier transforms",
+      "link": "https://arxiv.org/abs/2602.02865",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.58,
+      "why": "Real-space spectral analysis tools for turbulent flows offer alternative diagnostic methods potentially applicable to plasma turbulence characterization.",
+      "tags": [
+        "Turbulence",
+        "Spectral Analysis",
+        "Diagnostics"
+      ]
+    },
+    {
+      "id": "9ef73ecac4b9902d555bce19d4286402b5b69c1a",
+      "title": "An Oscillation-Free Real Fluid Quasi-Conservative Finite Volume Method for Transcritical and Phase-Change Flows",
+      "link": "https://arxiv.org/abs/2602.00658",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.57,
+      "why": "Develops robust finite volume methods for complex EoS and phase transitions. Applicable to propellant/working-fluid modeling in advanced propulsion systems under transcritical conditions.",
+      "tags": [
+        "Computational Methods",
+        "Fluid Dynamics",
+        "Finite Volume"
+      ]
+    },
+    {
+      "id": "790e7836d78c6d95709dd295b5de8d5d9c415b09",
+      "title": "Learning Large-Scale Competitive Team Behaviors with Mean-Field Interactions and Online Opponent Modeling",
+      "link": "https://arxiv.org/abs/2504.21164",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.57,
+      "why": "Mean-field approximation for scalable multi-agent learning. Techniques overlap with large-scale plasma simulations and distributed optimization problems.",
+      "tags": [
+        "MARL",
+        "Mean-Field",
+        "Scalability"
+      ]
+    },
+    {
+      "id": "fb501ee97ab1f30f8834b8765340fe43f9c9ca80",
+      "title": "SENSE-STEP: Learning Sim-to-Real Locomotion for a Sensory-Enabled Soft Quadruped Robot",
+      "link": "https://arxiv.org/abs/2602.13078",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.57,
+      "why": "Demonstrates sim-to-real learning under high-dimensional dynamics and difficult-to-model contact. Relevant to handling complex actuator-environment coupling analogous to plasma-cathode interactions.",
+      "tags": [
+        "Sim-to-Real",
+        "Learning-Control",
+        "Closed-Loop",
+        "High-Dimensional"
+      ]
+    },
+    {
+      "id": "2a04022eb1e4e68b881c97c5c67382071cfeb5b0",
+      "title": "Accelerated Markov Chain Monte Carlo Simulation via Neural Network-Driven Importance Sampling",
+      "link": "https://arxiv.org/abs/2602.12294",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "Combines neural networks with rare-event sampling to accelerate atomistic simulations. Marginal relevance to agentic R&D workflows for materials/plasma discovery, but applied to molecular systems rather than continuum plasma.",
+      "tags": [
+        "Machine Learning",
+        "Computational Methods",
+        "Monte Carlo"
+      ]
+    },
+    {
+      "id": "04e4aa946cf3deb945e3053f8c6dd71054184f7b",
+      "title": "X-SYS: A Reference Architecture for Interactive Explanation Systems",
+      "link": "https://arxiv.org/abs/2602.12748",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "Proposes system-level architecture for explainable AI maintaining usability across repeated queries and evolving models—relevant to building interpretable agentic R&D systems for scientific discovery.",
+      "tags": [
+        "AI-Agents",
+        "Explainability",
+        "System Architecture",
+        "XAI"
+      ]
+    },
+    {
+      "id": "669187b71dd73bdecb47c0e0447081f4c560ada9",
+      "title": "Rational Neural Networks have Expressivity Advantages",
+      "link": "https://arxiv.org/abs/2602.12390",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "Demonstrates expressivity advantages of rational activations over standard activations. Potentially applicable to designing more efficient neural network surrogates for MHD equations.",
+      "tags": [
+        "Neural Networks",
+        "Activation Functions",
+        "Approximation Theory"
+      ]
+    },
+    {
+      "id": "3fe6f2e3678a88f097a7cc4a8f771837ad6b8dfb",
+      "title": "Fractional Order Federated Learning for Battery Electric Vehicle Energy Consumption Modeling",
+      "link": "https://arxiv.org/abs/2602.12567",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "Federated learning for vehicle energy modeling; relevant to aerospace/automotive systems but focuses on distributed ML rather than plasma or propulsion physics.",
+      "tags": [
+        "Federated Learning",
+        "Energy Systems",
+        "Vehicles"
+      ]
+    },
+    {
+      "id": "1dc7c5fe941c0093e9a7fc1e563f63417bf82b1f",
+      "title": "Bench-MFG: A Benchmark Suite for Learning in Stationary Mean Field Games",
+      "link": "https://arxiv.org/abs/2602.12517",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "Standardized benchmarking for mean-field games and large-scale multi-agent systems. Provides evaluation framework applicable to complex physical system coordination.",
+      "tags": [
+        "MARL",
+        "Mean-Field",
+        "Benchmarking"
+      ]
+    },
+    {
+      "id": "a00e4ef4315fb6f6d6d99a44ae31c19dbcd7cd42",
+      "title": "A new model for two-layer liquid-gas stratified flows in pipes with general cross sections",
+      "link": "https://arxiv.org/abs/2602.12290",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "Two-phase stratified flow modeling with arbitrary equations of state relates to general compressible flow methodology, but lacks direct MHD coupling.",
+      "tags": [
+        "Multiphase Flows",
+        "Compressible Flows",
+        "Modeling"
+      ]
+    },
+    {
+      "id": "5b997b79cf428b695c4198fa4f9a4f163db92424",
+      "title": "Composable Model-Free RL for Navigation with Input-Affine Systems",
+      "link": "https://arxiv.org/abs/2602.12492",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "Model-free RL for control of input-affine systems relates to learning-based propulsion control, though lacks spacecraft or thruster specificity.",
+      "tags": [
+        "Reinforcement Learning",
+        "Control",
+        "Autonomous Systems"
+      ]
+    },
+    {
+      "id": "3ae3aebb01693ed2f1f9ba646e73db12109019f4",
+      "title": "Xiaomi-Robotics-0: An Open-Sourced Vision-Language-Action Model with Real-Time Execution",
+      "link": "https://arxiv.org/abs/2602.12684",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.55,
+      "why": "General-purpose VLA foundation model optimized for real-time execution. Relevant as a potential base for agentic control workflows, though not specialized for physics-driven domains.",
+      "tags": [
+        "VLA",
+        "Foundation-Models",
+        "Real-Time",
+        "Deployment"
+      ]
+    },
+    {
+      "id": "a756110337b69866c6a8eb97f07a5bc8abb9a02f",
+      "title": "BrowseComp-$V^3$: A Visual, Vertical, and Verifiable Benchmark for Multimodal Browsing Agents",
+      "link": "https://arxiv.org/abs/2602.12876",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.54,
+      "why": "Benchmarks multimodal agents for deep search in open-world environments—applicable to agentic systems that must navigate complex scientific literature and experimental documentation.",
+      "tags": [
+        "AI-Agents",
+        "Multimodal Learning",
+        "Benchmarking",
+        "Information Retrieval"
+      ]
+    },
+    {
+      "id": "2e6b5b6823232102489619ea2d0022043e7b584b",
+      "title": "To Mix or To Merge: Toward Multi-Domain Reinforcement Learning for Large Language Models",
+      "link": "https://arxiv.org/abs/2602.12566",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.54,
+      "why": "Explores multi-domain RL strategies for LLM reasoning capability—relevant to training agentic systems that must operate across different scientific domains (plasma physics, control theory, etc.).",
+      "tags": [
+        "AI-Agents",
+        "Reinforcement Learning",
+        "Multi-Domain",
+        "LLM"
+      ]
+    },
+    {
+      "id": "aaf32eeaebe9f3f491da341effdd38c3d9cc2418",
+      "title": "Regularized Meta-Learning for Improved Generalization",
+      "link": "https://arxiv.org/abs/2602.12469",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.54,
+      "why": "Meta-learning framework addressing ensemble methods and model conditioning. Applicable to training diverse physical system surrogates with improved generalization across parameter regimes.",
+      "tags": [
+        "Meta-Learning",
+        "Ensemble Methods",
+        "Generalization"
+      ]
+    },
+    {
+      "id": "62a70970e5b215b8a110ed16f70c89e22d43aaf7",
+      "title": "PMG: Parameterized Motion Generator for Human-like Locomotion Control",
+      "link": "https://arxiv.org/abs/2602.12656",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.54,
+      "why": "Parameterized policy framework for generalization across speeds and tasks. Modular approach useful for cross-domain control generalization, though locomotion-focused.",
+      "tags": [
+        "Motion-Control",
+        "Reinforcement-Learning",
+        "Generalization",
+        "Policy"
+      ]
+    },
+    {
+      "id": "a8589473573aa084c54fc7a2073c0888d9900508",
+      "title": "Bayesian Ego-graph Inference for Networked Multi-Agent Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2509.16606",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.53,
+      "why": "Addresses decentralized learning under constrained communication and dynamic networks. Relevant to distributed plasma control and adaptive feedback systems.",
+      "tags": [
+        "MARL",
+        "Decentralized-Learning",
+        "Network-Adaptation"
+      ]
+    },
+    {
+      "id": "cc2c4077698147090127af0eb5975998df9b72f8",
+      "title": "Can I Have Your Order? Monte-Carlo Tree Search for Slot Filling Ordering in Diffusion Language Models",
+      "link": "https://arxiv.org/abs/2602.12586",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.52,
+      "why": "Uses MCTS to optimize reasoning order in generative models—applicable to agentic R&D workflows that require sequential decision-making for hypothesis generation and experimental planning.",
+      "tags": [
+        "AI-Agents",
+        "MCTS",
+        "Reasoning",
+        "Generative Models"
+      ]
+    },
+    {
+      "id": "c7501c016a7e8f7d35887d6bb2464122ec9a26f4",
+      "title": "Power Interpretable Causal ODE Networks: A Unified Model for Explainable Anomaly Detection and Root Cause Analysis in Power Systems",
+      "link": "https://arxiv.org/abs/2602.12592",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.52,
+      "why": "ODE-based causal networks for dynamical systems; physics-grounded anomaly detection but applied to power grids rather than plasma or propulsion.",
+      "tags": [
+        "ODE Networks",
+        "Causal Inference",
+        "Power Systems"
+      ]
+    },
+    {
+      "id": "c66938b297a8c95b1821e5ba5dc3555f6ad417da",
+      "title": "Decentralized Optimal Equilibrium Learning in Stochastic Games via Single-bit Feedback",
+      "link": "https://arxiv.org/abs/2602.12830",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.52,
+      "why": "Tackles decentralized equilibrium selection with minimal communication. Applicable to distributed spacecraft swarms and multi-thruster coordination under bandwidth constraints.",
+      "tags": [
+        "MARL",
+        "Decentralized",
+        "Game-Theory"
+      ]
+    },
+    {
+      "id": "3ca8dba37ce643c34bfb54e7162d10ff6663bd38",
+      "title": "Acceleration Waves and the K-Condition in Viscoelastic Solids and Non-Newtonian Fluids",
+      "link": "https://arxiv.org/abs/2602.11122",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.52,
+      "why": "Hyperbolic system analysis and wave propagation in non-Newtonian media relates distantly to shock formation and discontinuity handling in MHD.",
+      "tags": [
+        "Hyperbolic Systems",
+        "Wave Propagation",
+        "Non-Newtonian Fluids"
+      ]
+    },
+    {
+      "id": "9a91f84642b941e10d63c295956d775a6600c9ac",
+      "title": "Learning Native Continuation for Action Chunking Flow Policies",
+      "link": "https://arxiv.org/abs/2602.12978",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.52,
+      "why": "Addresses continuity and smooth trajectory generation in chunked action execution. Relevant to thruster throttle ramping and control smoothness in high-frequency actuation.",
+      "tags": [
+        "VLA-Policy",
+        "Continuity",
+        "Action-Chunking",
+        "Real-Time"
+      ]
+    },
+    {
+      "id": "6219ddf6341bee8ae47d060db32535102cc416b1",
+      "title": "Intent-Driven Smart Manufacturing Integrating Knowledge Graphs and Large Language Models",
+      "link": "https://arxiv.org/abs/2602.12419",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.51,
+      "why": "Integrates LLMs with knowledge graphs for task automation in complex systems—methodologically relevant to agentic R&D architectures that bridge domain knowledge and autonomous reasoning.",
+      "tags": [
+        "AI-Agents",
+        "Knowledge Graphs",
+        "LLM",
+        "Manufacturing Automation"
+      ]
+    },
+    {
+      "id": "9cb1dc5be8bbcab9ba3d6c7de0a0538f9eae21da",
+      "title": "Real-to-Sim for Highly Cluttered Environments via Physics-Consistent Inter-Object Reasoning",
+      "link": "https://arxiv.org/abs/2602.12633",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.51,
+      "why": "Physics-consistent scene reconstruction and contact reasoning. Relevant methodology for ensuring simulation fidelity under complex multi-body interactions, analogous to plasma-electrode interactions.",
+      "tags": [
+        "Physics-Consistency",
+        "Simulation",
+        "Contact-Reasoning",
+        "Perception"
+      ]
+    },
+    {
+      "id": "8b4aa22d5d69370ec12a697f1399ba5a94f29e0e",
+      "title": "Ballistic Surfing Acceleration as a Coherent Mechanism for Electron Acceleration in Galaxy Cluster Shocks",
+      "link": "https://arxiv.org/abs/2602.12647",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.5,
+      "why": "Investigates novel particle acceleration mechanisms in astrophysical shocks. Marginal relevance to understanding plasma dynamics, but astrophysical context limits direct applicability to ground-based propulsion.",
+      "tags": [
+        "Plasma",
+        "Acceleration",
+        "Astrophysics"
+      ]
+    },
+    {
+      "id": "050e0518157ab52d2ba0b3831266089c3a85b7ce",
+      "title": "Multi-Agent Model-Based Reinforcement Learning with Joint State-Action Learned Embeddings",
+      "link": "https://arxiv.org/abs/2602.12520",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.5,
+      "why": "Model-based MARL with learned embeddings; useful for multi-agent spacecraft coordination but insufficient physics grounding for direct propulsion or MHD application.",
+      "tags": [
+        "MARL",
+        "World Models",
+        "Representation Learning"
+      ]
+    },
+    {
+      "id": "da2dc511c46f6ba16c59bf4e58c9afb72e4406c9",
+      "title": "TRANS: Terrain-aware Reinforcement Learning for Agile Navigation of Quadruped Robots under Social Interactions",
+      "link": "https://arxiv.org/abs/2602.12724",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.5,
+      "why": "End-to-end deep RL integrating environmental awareness with control. Holistic approach to navigation control relevant to adaptive thruster management under varying propellant/plasma conditions.",
+      "tags": [
+        "RL",
+        "Navigation",
+        "Terrain-Awareness",
+        "Embodied-Control"
+      ]
+    },
+    {
+      "id": "6b301152b34b8de10784e8aab0167cb5b7b687bf",
+      "title": "SKYSURF: A Self-learning Framework for Persistent Surveillance using Cooperative Aerial Gliders",
+      "link": "https://arxiv.org/abs/2602.12838",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.49,
+      "why": "Self-learning decision-making for autonomous vehicle energy management. Relevant to resource-constrained spacecraft propulsion system scheduling and long-duration mission planning.",
+      "tags": [
+        "Autonomous-Systems",
+        "Learning",
+        "Energy-Management",
+        "Decision-Making"
+      ]
+    },
+    {
+      "id": "40efeaf98668c44bf4ac857138660d66d0860430",
+      "title": "Electrohydrodynamic instability of Cu, W and Ti metal nanomelts under radiofrequency E-fields from multiphysics molecular dynamics simulations with coarse-grained density field analysis",
+      "link": "https://arxiv.org/abs/2602.12558",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.48,
+      "why": "Combines electrodynamics with MD for electrode/contact physics under RF fields. Potentially relevant to electrode erosion and cathode physics in plasma thrusters, though at atomic scale.",
+      "tags": [
+        "Computational Physics",
+        "Electrodynamics",
+        "Molecular Dynamics"
+      ]
+    },
+    {
+      "id": "04d68b041360647271badeb4fe4128273270ffd5",
+      "title": "AI Agents for Inventory Control: Human-LLM-OR Complementarity",
+      "link": "https://arxiv.org/abs/2602.12631",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.48,
+      "why": "Demonstrates agent reasoning that combines formal methods (OR) with LLM flexibility—applicable to scientific agents that integrate physics-based simulation with adaptive learning.",
+      "tags": [
+        "AI-Agents",
+        "Operations Research",
+        "LLM",
+        "Hybrid Systems"
+      ]
+    },
+    {
+      "id": "d5854ea606f60f647141938a277342e6137aa22d",
+      "title": "Policy4OOD: A Knowledge-Guided World Model for Policy Intervention Simulation against the Opioid Overdose Crisis",
+      "link": "https://arxiv.org/abs/2602.12373",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.48,
+      "why": "World model and counterfactual reasoning framework for complex dynamical systems. Methodologically relevant to multi-scale MHD simulation and policy exploration pipelines.",
+      "tags": [
+        "World Models",
+        "Counterfactual Reasoning",
+        "Simulation"
+      ]
+    },
+    {
+      "id": "f9627f84a4b7d1005d5b3fe5a802e871f88c2782",
+      "title": "Unifying Model-Free Efficiency and Model-Based Representations via Latent Dynamics",
+      "link": "https://arxiv.org/abs/2602.12643",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.48,
+      "why": "Hybrid model-free/model-based RL with learned latent dynamics; applicable to control problems but lacks physics domain specificity.",
+      "tags": [
+        "RL",
+        "Latent Dynamics",
+        "Model-Based Learning"
+      ]
+    },
+    {
+      "id": "6aa22faaddcacfe9a5cf17905eb134117907d171",
+      "title": "Theory of Mind Guided Strategy Adaptation for Zero-Shot Coordination",
+      "link": "https://arxiv.org/abs/2602.12458",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.48,
+      "why": "Zero-shot coordination via Theory of Mind. May inform adaptive multi-agent control strategies for spacecraft or plasma systems with unknown teammates.",
+      "tags": [
+        "MARL",
+        "Coordination",
+        "Adaptation"
+      ]
+    },
+    {
+      "id": "ed7018d8b293649a4d29154b7e5069b0791549fd",
+      "title": "Bicontinuity in active phase separation",
+      "link": "https://arxiv.org/abs/2601.03221",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.48,
+      "why": "Active phase separation and bicontinuous structures in soft matter have tangential relevance to non-equilibrium plasma dynamics but limited direct application.",
+      "tags": [
+        "Phase Separation",
+        "Active Matter",
+        "Soft Matter"
+      ]
+    },
+    {
+      "id": "94879ff6211b6d4d251d2429bf7cd382dec61347",
+      "title": "Zero-Shot Adaptation to Robot Structural Damage via Natural Language-Informed Kinodynamics Modeling",
+      "link": "https://arxiv.org/abs/2602.12385",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.48,
+      "why": "Adaptive kinodynamics modeling for damaged systems tangentially relates to fault-tolerant spacecraft control but lacks direct propulsion or MHD context.",
+      "tags": [
+        "Adaptive Control",
+        "Learning",
+        "Robotics"
+      ]
+    },
+    {
+      "id": "7c7c0ae26d843a9095ce995b41aba3b12b392ec8",
+      "title": "Scaling Single Human Demonstrations for Imitation Learning using Generative Foundational Models",
+      "link": "https://arxiv.org/abs/2602.12734",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.47,
+      "why": "Data-efficient learning from minimal examples using generative models. Relevant to transferring expert thruster operation signatures into autonomous policies with scarce training data.",
+      "tags": [
+        "Imitation-Learning",
+        "Generative-Models",
+        "Data-Efficiency",
+        "Robotics"
+      ]
+    },
+    {
+      "id": "1a6cf42a6e4fbb0cef3081984e0747193bec7e2e",
+      "title": "ALOE: Action-Level Off-Policy Evaluation for Vision-Language-Action Model Post-Training",
+      "link": "https://arxiv.org/abs/2602.12691",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.46,
+      "why": "Off-policy RL for VLA post-training and value function estimation from mixed data sources. Relevant to adaptive control refinement from heterogeneous thruster operation logs.",
+      "tags": [
+        "RL",
+        "Off-Policy",
+        "VLA",
+        "Value-Function"
+      ]
+    },
+    {
+      "id": "7d7519d852ef186a34bc2afcfdbee24a97876806",
+      "source": "[ArXiv] Computational Physics",
+      "title": "A new model for two-layer liquid-gas stratified flows in pipes with general cross sections",
+      "link": "https://arxiv.org/abs/2602.12290",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Develops two-phase flow models for propellant transport. Marginal relevance to spacecraft propellant management systems, but lacks plasma/electric propulsion context.",
+      "tags": [
+        "Fluid Dynamics",
+        "Two-Phase Flow"
+      ]
+    },
+    {
+      "id": "9e6886a67d926160d43f248926981e1ae3f5e167",
+      "source": "[ArXiv] Artificial Intelligence",
+      "title": "Information-theoretic analysis of world models in optimal reward maximizers",
+      "link": "https://arxiv.org/abs/2602.12963",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Analyzes information content in learned models for optimal control—tangentially relevant to agentic systems that build internal representations of physics for autonomous decision-making.",
+      "tags": [
+        "AI Theory",
+        "Optimal Control",
+        "Information Theory",
+        "World Models"
+      ]
+    },
+    {
+      "id": "21f4959b32899050f6b0c4a28b7c076823138a1b",
+      "title": "Energy-Aware Reinforcement Learning for Robotic Manipulation of Articulated Components in Infrastructure Operation and Maintenance",
+      "link": "https://arxiv.org/abs/2602.12288",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Energy-aware RL for automated systems could inform power optimization in spacecraft thrusters, though domain is primarily robotic manipulation rather than plasma/propulsion physics.",
+      "tags": [
+        "Reinforcement-Learning",
+        "Energy-Optimization",
+        "Robotics",
+        "Automation"
+      ]
+    },
+    {
+      "id": "84c6fa1378f143200f2b02ac3474ed58ea90ea2d",
+      "title": "Synthetic Interaction Data for Scalable Personalization in Large Language Models",
+      "link": "https://arxiv.org/abs/2602.12394",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Demonstrates synthetic data generation for scaling personalized agents. Applicable to training agentic workflows adapted to domain-specific scientific contexts.",
+      "tags": [
+        "Synthetic Data",
+        "AI-Agents",
+        "LLM"
+      ]
+    },
+    {
+      "id": "1e11137620646a805a0610cd8bc066c5052d77c4",
+      "title": "Bench-MFG: A Benchmark Suite for Learning in Stationary Mean Field Games",
+      "link": "https://arxiv.org/abs/2602.12517",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Mean field games connect to multi-agent control; relevant to distributed spacecraft systems but lacks explicit MHD or plasma physics application.",
+      "tags": [
+        "Mean Field Games",
+        "RL",
+        "Multi-Agent Systems"
+      ]
+    },
+    {
+      "id": "0763e06bbb4de362644ed7b0a06621ae0c075f18",
+      "title": "Building Large-Scale Drone Defenses from Small-Team Strategies",
+      "link": "https://arxiv.org/abs/2602.12502",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Dynamic programming decomposition for scalable multi-agent coordination. Techniques may transfer to large swarms of plasma-actuated spacecraft.",
+      "tags": [
+        "MARL",
+        "Scalability",
+        "Aerospace"
+      ]
+    },
+    {
+      "id": "4992663766168d296f0fabd6e81e089fed678303",
+      "title": "Enhanced numerical approaches for modeling insoluble surfactants in two-phase flows with the diffuse-interface method",
+      "link": "https://arxiv.org/abs/2602.13076",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Diffuse-interface methods for surfactant transport represent advanced interface-capturing techniques with potential applicability to plasma-neutral boundaries.",
+      "tags": [
+        "Diffuse Interface",
+        "Two-Phase Flows",
+        "Interface Dynamics"
+      ]
+    },
+    {
+      "id": "fd9baee920b56d6ef7828745d168c450fa456930",
+      "title": "Temporally-Sampled Efficiently Adaptive State Lattices for Autonomous Ground Robot Navigation in Partially Observed Environments",
+      "link": "https://arxiv.org/abs/2602.13159",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.45,
+      "why": "Adaptive replanning under partial observability. Relevant to spacecraft trajectory adjustment under incomplete plasma state information or sensor uncertainty.",
+      "tags": [
+        "Planning",
+        "Partial-Observability",
+        "Navigation",
+        "Adaptation"
+      ]
+    },
+    {
+      "id": "944135dcab13f98f69206859680846e5d13ca778",
+      "title": "Value Bonuses using Ensemble Errors for Exploration in Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2602.12375",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.44,
+      "why": "RL exploration technique using ensemble uncertainty. Marginally relevant to adaptive sampling strategies in computational physics experiments.",
+      "tags": [
+        "RL",
+        "Exploration",
+        "Ensemble Methods"
+      ]
+    },
+    {
+      "id": "3d09c2db53a477bace0cc35d5151caa959ab2815",
+      "title": "Imitating What Works: Simulation-Filtered Modular Policy Learning from Human Videos",
+      "link": "https://arxiv.org/abs/2602.13197",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.44,
+      "why": "Simulation-filtered learning for modular skill decomposition. Applicable to breaking thruster control into gating (init) and modulation (post-ignition) phases learned separately.",
+      "tags": [
+        "Imitation-Learning",
+        "Modular-Policies",
+        "Simulation-Filtering",
+        "Video-Learning"
+      ]
+    },
+    {
+      "id": "107d7c2c9122884dce6cb6a410773750e958cf0d",
+      "title": "Evaluating Robustness of Reasoning Models on Parameterized Logical Problems",
+      "link": "https://arxiv.org/abs/2602.12665",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.42,
+      "why": "Benchmarks logical reasoning robustness with controlled problem families—marginally relevant to validating agentic systems that must reason about physical constraints and equations.",
+      "tags": [
+        "AI-Reasoning",
+        "Benchmarking",
+        "Logic",
+        "Robustness"
+      ]
+    },
+    {
+      "id": "ee039776b9a7172fb9228917f63b0f98dccc30cd",
+      "title": "ForeAct: Steering Your VLA with Efficient Visual Foresight Planning",
+      "link": "https://arxiv.org/abs/2602.12322",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.42,
+      "why": "Vision-language-action planning with predictive models. Tangentially relevant as a planning methodology, but lacks direct connection to physics simulation or propulsion research.",
+      "tags": [
+        "Vision-Language-Action",
+        "Planning",
+        "Predictive-Models"
+      ]
+    },
+    {
+      "id": "d6af6130ca08c62f60ff1da0474cc445b3a55741",
+      "title": "Stabilizing Native Low-Rank LLM Pretraining",
+      "link": "https://arxiv.org/abs/2602.12429",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.42,
+      "why": "Low-rank factorization for efficient model training. Tangentially relevant to computational efficiency for deploying agents in resource-constrained environments.",
+      "tags": [
+        "LLM",
+        "Efficiency",
+        "Low-Rank Methods"
+      ]
+    },
+    {
+      "id": "44acd4f998c3c0db1e4f6e4fa86d9d86c28491f7",
+      "title": "Dual-Granularity Contrastive Reward via Generated Episodic Guidance for Efficient Embodied RL",
+      "link": "https://arxiv.org/abs/2602.12636",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.42,
+      "why": "Embodied RL with dense rewards; relevant to robotic control but not specifically to plasma physics or spacecraft propulsion.",
+      "tags": [
+        "Embodied RL",
+        "Reward Design",
+        "Manipulation"
+      ]
+    },
+    {
+      "id": "1afed10ce5535cd97a4294e2321e5d3ee459059d",
+      "title": "Provably Convergent Actor-Critic in Risk-averse MARL",
+      "link": "https://arxiv.org/abs/2602.12386",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.42,
+      "why": "Convergence guarantees for risk-averse multi-agent learning. Relevant to safe R&D workflows requiring robust policy convergence.",
+      "tags": [
+        "MARL",
+        "Actor-Critic",
+        "Safety"
+      ]
+    },
+    {
+      "id": "13212ce15ea3300c82474a9a4a3447c3ca100f49",
+      "title": "ForeAct: Steering Your VLA with Efficient Visual Foresight Planning",
+      "link": "https://arxiv.org/abs/2602.12322",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.42,
+      "why": "Vision-language action models for robotic planning represent agentic AI approaches but lack application to physics-based or aerospace R&D automation.",
+      "tags": [
+        "AI Agents",
+        "Robotics",
+        "Vision-Language Models"
+      ]
+    },
+    {
+      "id": "20cd2516f6ab50f9d9b47083fb9761203f360269",
+      "title": "Continuous Diffusion Models Can Obey Formal Syntax",
+      "link": "https://arxiv.org/abs/2602.12468",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.41,
+      "why": "Syntax-guided generation for language models. Low relevance but potentially useful for constraining agentic outputs to valid scientific formats or code.",
+      "tags": [
+        "Diffusion Models",
+        "LLM",
+        "Constraint Satisfaction"
+      ]
+    },
+    {
+      "id": "49d45d0c29fc5beecf4771c963b1a9769d257ce5",
+      "title": "The Asymptotic State of Decaying Turbulence",
+      "link": "https://arxiv.org/abs/2602.12501",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.41,
+      "why": "DNS study of turbulent decay across Reynolds numbers. Applicable to understanding turbulence effects in plasma plumes and MHD boundary layers.",
+      "tags": [
+        "Fluid-Dynamics",
+        "Turbulence",
+        "DNS"
+      ]
+    },
+    {
+      "id": "8f2c291cb38e7ed7ce7f885d6336eb05fb6b2c4e",
+      "title": "A T-matrix scattering formalism for electron-beam spectroscopy",
+      "link": "https://arxiv.org/abs/2602.12743",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.4,
+      "why": "Develops electron scattering formalism for nanophotonic systems. Limited relevance; focused on microscopy/materials characterization rather than plasma physics or propulsion applications.",
+      "tags": [
+        "Computational Physics",
+        "Electron Scattering"
+      ]
+    },
+    {
+      "id": "671ccefa71076c88bad5be51e54a47acc3599e27",
+      "title": "Consistency of Large Reasoning Models Under Multi-Turn Attacks",
+      "link": "https://arxiv.org/abs/2602.13093",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.4,
+      "why": "Evaluates reasoning model robustness under adversarial pressure—marginally relevant to reliability assessment of agentic R&D systems that must maintain consistency across complex workflows.",
+      "tags": [
+        "AI-Reasoning",
+        "Robustness",
+        "Safety",
+        "Adversarial"
+      ]
+    },
+    {
+      "id": "3a310d92a30c036eae7fbad28cc79c5ce8eb931f",
+      "title": "Intrinsic Credit Assignment for Long Horizon Interaction",
+      "link": "https://arxiv.org/abs/2602.12342",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.4,
+      "why": "Addresses credit assignment in long-horizon RL tasks; potentially applicable to multi-step scientific workflows, but lacks domain-specific physics grounding.",
+      "tags": [
+        "Reinforcement-Learning",
+        "Credit-Assignment",
+        "Long-Horizon-Tasks"
+      ]
+    },
+    {
+      "id": "74b2759c5a5fa7f62e0e32deec11b4946360533e",
+      "title": "A Theoretical Analysis of Mamba's Training Dynamics: Filtering Relevant Features for State Space Models",
+      "link": "https://arxiv.org/abs/2602.12499",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.4,
+      "why": "State space models have tangential relevance to dynamical systems, but this paper focuses on sequence modeling without physical simulation context.",
+      "tags": [
+        "State Space Models",
+        "Sequence Modeling",
+        "Learning Dynamics"
+      ]
+    },
+    {
+      "id": "26d8c9b2f9ef56d6ff87bc0842d2b4846504b269",
+      "title": "LongNav-R1: Horizon-Adaptive Multi-Turn RL for Long-Horizon VLA Navigation",
+      "link": "https://arxiv.org/abs/2602.12351",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.4,
+      "why": "Multi-turn RL for robotic navigation shows agentic paradigm but lacks scientific or aerospace application.",
+      "tags": [
+        "Reinforcement Learning",
+        "AI Agents",
+        "Robotics"
+      ]
+    },
+    {
+      "id": "c1a41ce267d15a9c35c94613a60275c49a63880a",
+      "title": "Tuning Optical Properties of FTO via Carbonaceous Al2O3 Microdot Deposition by DC plasma sputtering",
+      "link": "https://arxiv.org/abs/2602.11970",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Studies plasma discharge for materials synthesis. Marginal relevance; focuses on low-power DC plasma for deposition rather than high-energy MHD or propulsion physics.",
+      "tags": [
+        "Plasma",
+        "Materials Processing"
+      ]
+    },
+    {
+      "id": "2b8668103f3d34815ca0a1213ff8a1b9f595ef99",
+      "title": "Why Deep Jacobian Spectra Separate: Depth-Induced Scaling and Singular-Vector Alignment",
+      "link": "https://arxiv.org/abs/2602.12384",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Theoretical analysis of deep neural network training dynamics. Marginally relevant to understanding SciML model optimization for physics simulation.",
+      "tags": [
+        "Deep-Learning-Theory",
+        "Neural-Networks",
+        "Training-Dynamics"
+      ]
+    },
+    {
+      "id": "b0e42f9c1ac47c5230670211ef75f114003b52cc",
+      "title": "Deep Doubly Debiased Longitudinal Effect Estimation with ICE G-Computation",
+      "link": "https://arxiv.org/abs/2602.12379",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Causal inference framework for sequential decision-making. Marginally applicable to understanding dynamic feedback in complex physical systems.",
+      "tags": [
+        "Causal Inference",
+        "Sequential Decision-Making"
+      ]
+    },
+    {
+      "id": "8aabd5ced186908ba921232088969da26811589f",
+      "title": "Coden: Efficient Temporal Graph Neural Networks for Continuous Prediction",
+      "link": "https://arxiv.org/abs/2602.12613",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Temporal GNNs for continuous prediction; relevant to time-series physical systems but lacks domain-specific physics grounding.",
+      "tags": [
+        "Graph Neural Networks",
+        "Temporal Prediction",
+        "Efficiency"
+      ]
+    },
+    {
+      "id": "10cadaa67fbd1e8c7ca9cb22f82cbe692a2b3fa5",
+      "title": "Real-time prediction of geomagnetic storms using Solar Orbiter as a far upstream solar wind monitor",
+      "link": "https://arxiv.org/abs/2508.13892",
+      "source": "[ArXiv] Space Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Demonstrates space weather prediction using distributed sensing. Applicable to spacecraft trajectory planning and solar wind-driven plasma dynamics.",
+      "tags": [
+        "Space-Physics",
+        "Plasma",
+        "Prediction"
+      ]
+    },
+    {
+      "id": "618c066512b58a8bda5de9e45c7e7f8303c001bb",
+      "title": "Nanoscale Electroviscous Lift Force",
+      "link": "https://arxiv.org/abs/2602.12832",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Nanoscale electrokinetic effects lack direct relevance to MHD or plasma propulsion physics; primarily experimental material science.",
+      "tags": [
+        "Electrokinetics",
+        "Nanoscale",
+        "Experimental Physics"
+      ]
+    },
+    {
+      "id": "1a689e8a29e67b1ce33989ce1f7043f4398f1274",
+      "title": "Control Barrier Functions with Audio Risk Awareness for Robot Safe Navigation on Construction Sites",
+      "link": "https://arxiv.org/abs/2602.12416",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Control barrier functions for safety in dynamic environments relate broadly to advanced control theory but applied to terrestrial construction robotics.",
+      "tags": [
+        "Control Theory",
+        "Safety",
+        "Robotics"
+      ]
+    },
+    {
+      "id": "31c038ab22908ee788e8d3faf53fe5d3d3c45631",
+      "title": "INHerit-SG: Incremental Hierarchical Semantic Scene Graphs with RAG-Style Retrieval",
+      "link": "https://arxiv.org/abs/2602.12971",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.38,
+      "why": "Hierarchical semantic abstraction with retrieval-augmented reasoning. Marginal relevance to multi-scale model representation in plasma systems, primarily focused on visual navigation.",
+      "tags": [
+        "Scene-Graphs",
+        "Knowledge-Retrieval",
+        "Hierarchical-Representation",
+        "Navigation"
+      ]
+    },
+    {
+      "id": "864c617363a0961fe1885756d5005fee1d609f08",
+      "title": "Tight Bounds for Logistic Regression with Large Stepsize Gradient Descent in Low Dimension",
+      "link": "https://arxiv.org/abs/2602.12471",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.36,
+      "why": "Optimization theory for gradient descent. Foundational but not directly applicable to the researcher's applied domains.",
+      "tags": [
+        "Optimization Theory",
+        "Gradient Descent"
+      ]
+    },
+    {
+      "id": "90d754903eeccf47aaf94d51997a9914d0f8d734",
+      "title": "Eva-Tracker: ESDF-update-free, Visibility-aware Planning with Target Reacquisition for Robust Aerial Tracking",
+      "link": "https://arxiv.org/abs/2602.12549",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.36,
+      "why": "Visibility-aware planning for aerial vehicle trajectory optimization shows aerospace application potential but focuses on tracking rather than propulsion or plasma physics.",
+      "tags": [
+        "Aerospace",
+        "Planning",
+        "Control"
+      ]
+    },
+    {
+      "id": "072920a9179156f6ce6ee50ee6e944784f5f71f6",
+      "title": "Estimating Full Path Lengths and Kinetics from Partial Path Transition Interface Sampling Simulations",
+      "link": "https://arxiv.org/abs/2602.12835",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.35,
+      "why": "Advances rare-event sampling in molecular dynamics. Tangential to computational methods but applied to biological/chemical kinetics rather than plasma/propulsion systems.",
+      "tags": [
+        "Computational Methods",
+        "Molecular Dynamics"
+      ]
+    },
+    {
+      "id": "37fa122b60fa10643103cebd3d005f67c97dc979",
+      "title": "Quantifying the Role of Higher-Lying Excited States in Organic Emitters via Multistate Ab Initio Kinetic Modeling",
+      "link": "https://arxiv.org/abs/2508.16436",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.35,
+      "why": "Applies ab initio kinetic modeling to photophysical systems—marginal relevance as it demonstrates computational methods for multi-state dynamics but lacks direct connection to plasma/MHD.",
+      "tags": [
+        "Computational Physics",
+        "Kinetic Modeling",
+        "Quantum Chemistry"
+      ]
+    },
+    {
+      "id": "7c0247368b696df6fce885aba38d98618f194e9f",
+      "title": "Rational Neural Networks have Expressivity Advantages",
+      "link": "https://arxiv.org/abs/2602.12390",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.35,
+      "why": "Studies activation function design for improved expressivity. Minimally relevant to physics-informed neural networks, but lacks propulsion/MHD focus.",
+      "tags": [
+        "Neural-Networks",
+        "Activation-Functions",
+        "Expressivity"
+      ]
+    },
+    {
+      "id": "e29b4dc923fdb877271f12a261a20cff36747df0",
+      "title": "Geometric separation and constructive universal approximation with two hidden layers",
+      "link": "https://arxiv.org/abs/2602.12482",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.35,
+      "why": "Theoretical foundation for neural network approximation; relevant to SciML applications but lacks direct connection to physics simulation or control systems.",
+      "tags": [
+        "Neural Networks",
+        "Approximation Theory",
+        "Mathematical Foundations"
+      ]
+    },
+    {
+      "id": "bff7f8737b102567c40c5e4e07c16da55c85d2f8",
+      "title": "Flow-Factory: A Unified Framework for Reinforcement Learning in Flow-Matching Models",
+      "link": "https://arxiv.org/abs/2602.12529",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.35,
+      "why": "RL framework for generative models; tangential to physics but focused on diffusion/flow generation without scientific discovery automation.",
+      "tags": [
+        "Generative Models",
+        "RL",
+        "Framework"
+      ]
+    },
+    {
+      "id": "e16386d55625ba2d519e9e2da82f411d5ad37f11",
+      "title": "On multiple stable states in Taylor-Couette flow with realistic end-wall boundary conditions",
+      "link": "https://arxiv.org/abs/2602.12994",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.35,
+      "why": "DNS investigation of shear-driven flows with realistic BCs. Relevant to understanding MHD flows in cylindrical thruster geometries.",
+      "tags": [
+        "Fluid-Dynamics",
+        "DNS",
+        "Shear-Flow"
+      ]
+    },
+    {
+      "id": "a1936a906b48b17224114010ec4729d0cfe543b5",
+      "title": "Schur-MI: Fast Mutual Information for Robotic Information Gathering",
+      "link": "https://arxiv.org/abs/2602.12346",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.35,
+      "why": "Efficient mutual information computation for sensor planning lacks direct relevance to MHD, plasma physics, or aerospace propulsion R&D.",
+      "tags": [
+        "Information Theory",
+        "Robotics",
+        "Sensor Planning"
+      ]
+    },
+    {
+      "id": "4140548484faa4b0299cdf2640a1d67f59dc33f8",
+      "title": "Correctness, Artificial Intelligence, and the Epistemic Value of Mathematical Proof",
+      "link": "https://arxiv.org/abs/2602.12463",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.34,
+      "why": "Philosophical perspective on AI-assisted theorem proving and formal verification. Tangentially relevant to understanding verification in agentic R&D workflows.",
+      "tags": [
+        "AI",
+        "Formal Methods",
+        "Philosophy of Science"
+      ]
+    },
+    {
+      "id": "547a6249798d3febf8f5f3614e66f2c1d6ea3820",
+      "title": "Interference-Robust Non-Coherent Over-the-Air Computation for Decentralized Optimization",
+      "link": "https://arxiv.org/abs/2602.12426",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.34,
+      "why": "Wireless-channel-based distributed optimization without CSI. May inform communication-constrained multi-spacecraft coordination.",
+      "tags": [
+        "Decentralized-Optimization",
+        "Wireless",
+        "Communication"
+      ]
+    },
+    {
+      "id": "b3cc1e8521c8b639bf52e307588fb2e5df6f74d8",
+      "title": "Efficient Personalized Federated PCA with Manifold Optimization for IoT Anomaly Detection",
+      "link": "https://arxiv.org/abs/2602.12622",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.33,
+      "why": "Federated PCA for IoT systems; distributed computing relevant to spacecraft networks but lacks physics or propulsion focus.",
+      "tags": [
+        "Federated Learning",
+        "Anomaly Detection",
+        "IoT"
+      ]
+    },
+    {
+      "id": "70bed251948142d6bcb83354264cee2f20aed94e",
+      "title": "A Survey on Hypergame Theory: Modeling Misaligned Perceptions and Nested Beliefs for Multi-agent Systems",
+      "link": "https://arxiv.org/abs/2507.19593",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.33,
+      "why": "Survey of game-theoretic frameworks for MAS with heterogeneous reasoning. Background relevant to modeling agent interactions in R&D workflows.",
+      "tags": [
+        "Game-Theory",
+        "MARL",
+        "Modeling"
+      ]
+    },
+    {
+      "id": "ad4b0fcd5ba8994a461fc50cfc4dddbc78ccf980",
+      "title": "GT-HarmBench: Benchmarking AI Safety Risks Through the Lens of Game Theory",
+      "link": "https://arxiv.org/abs/2602.12316",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.32,
+      "why": "Game-theoretic safety benchmark for multi-agent systems—minor relevance to agentic R&D where human-agent coordination safety matters, but lacks domain specificity.",
+      "tags": [
+        "AI-Safety",
+        "Game Theory",
+        "Multi-Agent",
+        "Benchmarking"
+      ]
+    },
+    {
+      "id": "03aac792af5b0e880c2fe2e099dbe9f84d3b1993",
+      "title": "What does RL improve for Visual Reasoning? A Frankenstein-Style Analysis",
+      "link": "https://arxiv.org/abs/2602.12395",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.32,
+      "why": "Analyzes RL for vision-language models in visual reasoning tasks. Not directly applicable to computational physics or propulsion research.",
+      "tags": [
+        "Reinforcement-Learning",
+        "Visual-Reasoning",
+        "Vision-Language-Models"
+      ]
+    },
+    {
+      "id": "532340ebdee52d31709d2813f18908129398dd30",
+      "title": "Designing RNAs with Language Models",
+      "link": "https://arxiv.org/abs/2602.12470",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.32,
+      "why": "Language model-based approach to molecular design via conditional generation. Domain-specific (biology) but demonstrates agentic approach to complex combinatorial optimization.",
+      "tags": [
+        "LLM",
+        "Molecular Design",
+        "Conditional Generation"
+      ]
+    },
+    {
+      "id": "2707b58111ad8b125cf8a71be7fedea8f14818af",
+      "title": "Designing RNAs with Language Models",
+      "link": "https://arxiv.org/abs/2602.12470",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.32,
+      "why": "Reframes molecular design as conditional sequence generation. Demonstrates pattern applicable to design automation in aerospace systems.",
+      "tags": [
+        "LLM",
+        "Design Automation",
+        "AI-Assisted Discovery"
+      ]
+    },
+    {
+      "id": "c0e8227f80dcdf3a6fb66360a995a0f2c02d8df5",
+      "title": "Formalizing the Sampling Design Space of Diffusion-Based Generative Models via Adaptive Solvers and Wasserstein-Bounded Timesteps",
+      "link": "https://arxiv.org/abs/2602.12624",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.32,
+      "why": "Adaptive solvers for diffusion models; computational techniques potentially applicable to PDEs but no explicit scientific computing context.",
+      "tags": [
+        "Diffusion Models",
+        "Solvers",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "c1363a0d672152ec90409a459ca8f0879f377e81",
+      "source": "[ArXiv] Robotics",
+      "title": "Self-Refining Vision Language Model for Robotic Failure Detection and Reasoning",
+      "link": "https://arxiv.org/abs/2602.12405",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.32,
+      "why": "Vision-language reasoning for robot failure diagnosis is general-purpose AI without application to physics simulation or propulsion systems.",
+      "tags": [
+        "Vision-Language Models",
+        "Robotics",
+        "AI"
+      ]
+    },
+    {
+      "id": "a84703fd98ead62915d31ecb116f6849cc275ec0",
+      "title": "Neural Quantum States Based on Selected Configurations",
+      "link": "https://arxiv.org/abs/2602.12993",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.3,
+      "why": "Applies neural networks to quantum many-body problems. Minimal relevance; focused on quantum chemistry rather than classical plasma or aerospace applications.",
+      "tags": [
+        "Machine Learning",
+        "Quantum Chemistry"
+      ]
+    },
+    {
+      "id": "62adf2d77897b6076efe37653a04f266ce075b3d",
+      "title": "A Theoretical Framework for Adaptive Utility-Weighted Benchmarking",
+      "link": "https://arxiv.org/abs/2602.12356",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.3,
+      "why": "Proposes holistic benchmarking framework for AI systems—minimal relevance as theoretical contribution without domain application to scientific discovery or aerospace.",
+      "tags": [
+        "AI Benchmarking",
+        "ML Methodology",
+        "Evaluation"
+      ]
+    },
+    {
+      "id": "b2c2b176dedff5e1e73c525bf7d80ab95fab0773",
+      "title": "Value Bonuses using Ensemble Errors for Exploration in Reinforcement Learning",
+      "link": "https://arxiv.org/abs/2602.12375",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.3,
+      "why": "RL exploration technique via ensemble uncertainty. General algorithmic advancement with limited connection to scientific simulation or spacecraft control.",
+      "tags": [
+        "Reinforcement-Learning",
+        "Exploration",
+        "Uncertainty"
+      ]
+    },
+    {
+      "id": "d0f4b3d21d861be55fde73eef223e4b3a961c7b6",
+      "title": "SD-MoE: Spectral Decomposition for Effective Expert Specialization",
+      "link": "https://arxiv.org/abs/2602.12556",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.3,
+      "why": "Mixture-of-Experts optimization; architectural improvement for LLMs but lacks connection to physics-informed learning or scientific workflows.",
+      "tags": [
+        "MoE",
+        "Neural Architecture",
+        "LLM Scaling"
+      ]
+    },
+    {
+      "id": "4d73dc59d0792c7b83da3af2987304da99711c50",
+      "title": "LatentAM: Real-Time, Large-Scale Latent Gaussian Attention Mapping via Online Dictionary Learning",
+      "link": "https://arxiv.org/abs/2602.12314",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.3,
+      "why": "3D Gaussian splatting for open-vocabulary perception is a robotics-focused ML method without aerospace or physics simulation relevance.",
+      "tags": [
+        "Computer Vision",
+        "Robotics",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "367237823a0bed22d25dbe0094e8129c25db803f",
+      "title": "An Always-Accepting Algorithm for Transition Path Sampling",
+      "link": "https://arxiv.org/abs/2602.13130",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.28,
+      "why": "Improves rare-event sampling efficiency for stochastic dynamics. Limited relevance; applicable to molecular kinetics but not directly to plasma/MHD or propulsion research.",
+      "tags": [
+        "Computational Methods",
+        "Statistical Mechanics"
+      ]
+    },
+    {
+      "id": "be5229073d7606b5a2d6321e4ce76c001ffcdce5",
+      "title": "Evolving Beyond Snapshots: Harmonizing Structure and Sequence via Entity State Tuning for Temporal Knowledge Graph Forecasting",
+      "link": "https://arxiv.org/abs/2602.12389",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.28,
+      "why": "Addresses temporal reasoning in knowledge graphs—minimal relevance to computational physics or plasma dynamics; applies to general knowledge representation but not scientific simulation.",
+      "tags": [
+        "Knowledge Graphs",
+        "Temporal Reasoning",
+        "Graph Learning"
+      ]
+    },
+    {
+      "id": "34159c55085349e075e71c0ec3e3ed50f695541a",
+      "title": "Soft Contamination Means Benchmarks Test Shallow Generalization",
+      "link": "https://arxiv.org/abs/2602.12413",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.28,
+      "why": "Addresses generalization issues in model evaluation. Relevant to ensuring physical surrogates generalize beyond training data distributions.",
+      "tags": [
+        "Model Evaluation",
+        "Generalization",
+        "Data Quality"
+      ]
+    },
+    {
+      "id": "30929204b3a8c171fffee364f07c4cc3b0d83dbf",
+      "title": "Multi-Head Attention as a Source of Catastrophic Forgetting in MoE Transformers",
+      "link": "https://arxiv.org/abs/2602.12587",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.28,
+      "why": "Continual learning in MoE architectures; architectural insight for LLMs but not directed at physics or scientific discovery.",
+      "tags": [
+        "Continual Learning",
+        "MoE",
+        "Transformers"
+      ]
+    },
+    {
+      "id": "25076a259732b43d2f4f919b42e9666741acbcc1",
+      "title": "Predicting Dynamic Map States from Limited Field-of-View Sensor Data",
+      "link": "https://arxiv.org/abs/2602.12360",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.28,
+      "why": "Sensor-based environment prediction for autonomous systems lacks direct application to MHD simulation or plasma propulsion design.",
+      "tags": [
+        "Perception",
+        "Robotics",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "bdd9967a301934164dbcf11de1f50e678f538df3",
+      "title": "Block-Sample MAC-Bayes Generalization Bounds",
+      "link": "https://arxiv.org/abs/2602.12605",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.27,
+      "why": "Theoretical generalization bounds; foundational ML theory without application to physics or scientific discovery workflows.",
+      "tags": [
+        "Learning Theory",
+        "Generalization",
+        "PAC-Bayes"
+      ]
+    },
+    {
+      "id": "ed375282742e0569532913b0e0fdc0f23d32f288",
+      "title": "On the rheoscopic measurement of turbulent decay in wall-bounded flows",
+      "link": "https://arxiv.org/abs/2602.12865",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.26,
+      "why": "Experimental turbulence measurement in wall-bounded flows. Limited direct relevance; tangential to plasma plume diagnostics.",
+      "tags": [
+        "Fluid-Dynamics",
+        "Experimental",
+        "Turbulence"
+      ]
+    },
+    {
+      "id": "e7d7e59f481b4739e51a085a5d5d4d64d49a5efd",
+      "title": "Enhanced numerical approaches for modeling insoluble surfactants in two-phase flows with the diffuse-interface method",
+      "link": "https://arxiv.org/abs/2602.13076",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.25,
+      "why": "Develops interface-tracking methods for two-phase flows with surfactants. Marginal relevance to fluid mechanics fundamentals; lacks plasma/electric propulsion focus.",
+      "tags": [
+        "Computational Methods",
+        "Fluid Dynamics"
+      ]
+    },
+    {
+      "id": "879dd90494eb97c2ccdea5599faae8fa818c3e25",
+      "title": "Wireless TokenCom: RL-Based Tokenizer Agreement for Multi-User Wireless Token Communications",
+      "link": "https://arxiv.org/abs/2602.12338",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.25,
+      "why": "RL-based optimization for communication protocols. Tangentially relevant to distributed agent coordination but domain-specific to telecommunications.",
+      "tags": [
+        "RL",
+        "Communications",
+        "Multi-Agent Systems"
+      ]
+    },
+    {
+      "id": "c051f6fc3a89815fed36599d02cc2bac53e9c80d",
+      "title": "Analytical Results for Two Exponential Family Distributions in Hierarchical Dirichlet Processes",
+      "link": "https://arxiv.org/abs/2602.12527",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.25,
+      "why": "Bayesian nonparametric theory; foundational ML but not connected to physics simulation, control, or agentic workflows.",
+      "tags": [
+        "Bayesian Methods",
+        "Nonparametric Models",
+        "Theory"
+      ]
+    },
+    {
+      "id": "8234007b900d3293bf480d24cfcaf90abcf94499",
+      "title": "Hemispherical Angular Power Mapping of Installed mmWave Radar Modules Under Realistic Deployment Constraints",
+      "link": "https://arxiv.org/abs/2602.12584",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.25,
+      "why": "RF/radar sensor characterization under deployment constraints. Minimal relevance; applicable only if plasma thruster diagnostic telemetry relies on mmWave sensing.",
+      "tags": [
+        "RF-Sensing",
+        "Hardware-Characterization",
+        "Measurement"
+      ]
+    },
+    {
+      "id": "42d445386553fa6dea486c6e01f5813df316ac24",
+      "title": "Parker Solar Probe observations of solar energetic particle (SEP) events with inverse velocity arrival (IVA) features",
+      "link": "https://arxiv.org/abs/2602.12475",
+      "source": "[ArXiv] Space Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.24,
+      "why": "Observational study of solar energetic particles. Peripheral to thruster physics; relevant only to space environment characterization.",
+      "tags": [
+        "Space-Physics",
+        "Particles",
+        "Observation"
+      ]
+    },
+    {
+      "id": "90ebc6f8a5e685cf0c541658e7f73073405b3cff",
+      "title": "Influence of finite temperature degeneracy and superthermal ions on dust acoustic solitary structures",
+      "link": "https://arxiv.org/abs/2602.12585",
+      "source": "[ArXiv] Plasma Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.22,
+      "why": "Studies nonlinear structures in dusty plasmas with quantum/superthermal effects. Niche theoretical plasma physics; limited relevance to applied MHD propulsion or computational methods.",
+      "tags": [
+        "Plasma",
+        "Dust Acoustic Waves"
+      ]
+    },
+    {
+      "id": "0fdaaeee427655b889e031969b40cf4e8c092434",
+      "title": "Abstractive Red-Teaming of Language Model Character",
+      "link": "https://arxiv.org/abs/2602.12318",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.22,
+      "why": "LLM safety and behavior specification. Marginally relevant to ensuring agentic scientific systems maintain expected behavior and safety constraints.",
+      "tags": [
+        "LLM Safety",
+        "Red-Teaming",
+        "AI Alignment"
+      ]
+    },
+    {
+      "id": "3dc8ea6bce621953e7c96cee53eab2bde5608eb8",
+      "title": "Constraint-Rectified Training for Efficient Chain-of-Thought",
+      "link": "https://arxiv.org/abs/2602.12526",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.22,
+      "why": "Addresses efficient LLM reasoning; not directly relevant to physics simulation or agentic R&D automation for scientific discovery.",
+      "tags": [
+        "LLM Reasoning",
+        "Chain-of-Thought",
+        "RL Optimization"
+      ]
+    },
+    {
+      "id": "428c0ee62d446010f05418e34da6855f8f2c8d89",
+      "title": "The Appeal and Reality of Recycling LoRAs with Adaptive Merging",
+      "link": "https://arxiv.org/abs/2602.12323",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.2,
+      "why": "Model merging technique for combining fine-tuned modules. Not relevant to core research but could support rapid agent adaptation.",
+      "tags": [
+        "LLM",
+        "Model Merging",
+        "Transfer Learning"
+      ]
+    },
+    {
+      "id": "14437390d5384d3f8cf0fc0df28d53ab3d974744",
+      "title": "HyperMLP: An Integrated Perspective for Sequence Modeling",
+      "link": "https://arxiv.org/abs/2602.12601",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.2,
+      "why": "Alternative to attention mechanisms for sequence modeling; general-purpose architecture without scientific computing or physics application.",
+      "tags": [
+        "Sequence Modeling",
+        "Neural Architectures",
+        "Attention"
+      ]
+    },
+    {
+      "id": "9048db6aec262df1b53bed86f9fa71d1fcd7e87a",
+      "title": "PISHYAR: A Socially Intelligent Smart Cane for Indoor Social Navigation and Multimodal Human-Robot Interaction for Visually Impaired People",
+      "link": "https://arxiv.org/abs/2602.12597",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.2,
+      "why": "Social navigation and human-robot interaction for assistive robotics. No relevance to MHD, plasma propulsion, or computational physics domains.",
+      "tags": [
+        "HRI",
+        "Social-Navigation",
+        "Assistive-Robotics"
+      ]
+    },
+    {
+      "id": "9848031724e7da7d90c42a9b5ad75cafae2aeac1",
+      "title": "GeoAgent: Learning to Geolocate Everywhere with Reinforced Geographic Characteristics",
+      "link": "https://arxiv.org/abs/2602.12617",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.18,
+      "why": "Domain-specific agent for geolocation reasoning—not relevant to plasma physics, propulsion, or scientific R&D pipelines.",
+      "tags": [
+        "AI-Agents",
+        "Geolocation",
+        "Domain-Specific"
+      ]
+    },
+    {
+      "id": "c6c53bc951fbe5d61fb8d4e9545a504335132521",
+      "title": "CacheMind: From Miss Rates to Why -- Natural-Language, Trace-Grounded Reasoning for Cache Replacement",
+      "link": "https://arxiv.org/abs/2602.12422",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.18,
+      "why": "LLM-based cache optimization for CPU microarchitecture. While infrastructure-level, lacks direct application to physics simulation or aerospace research.",
+      "tags": [
+        "Computer-Architecture",
+        "Cache-Optimization",
+        "LLM-Reasoning"
+      ]
+    },
+    {
+      "id": "4fea4d28bdf4ebce425d6e4ce9f76de6a55042f5",
+      "title": "VI-CuRL: Stabilizing Verifier-Independent RL Reasoning via Confidence-Guided Variance Reduction",
+      "link": "https://arxiv.org/abs/2602.12579",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.18,
+      "why": "Verifier-free RL for LLM reasoning; general AI methodology without physical or scientific discovery application.",
+      "tags": [
+        "LLM Reasoning",
+        "Reinforcement Learning",
+        "Verification"
+      ]
+    },
+    {
+      "id": "df157c40b0b24aedad13812fe7573ea5b332b65a",
+      "title": "Stokes flows in a sessile hemispherical drop due to evaporation and surface tension gradient",
+      "link": "https://arxiv.org/abs/2602.12768",
+      "source": "[ArXiv] Fluid Dynamics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.18,
+      "why": "Analytical study of viscous droplet flows with surface tension. No application to plasma, MHD, or aerospace propulsion.",
+      "tags": [
+        "Fluid-Dynamics",
+        "Surface-Tension",
+        "Analytical"
+      ]
+    },
+    {
+      "id": "b1645b63ea410b639c53eb0b44f9fa7b3f2f0b5d",
+      "title": "Adding internal audio sensing to internal vision enables human-like in-hand fabric recognition with soft robotic fingertips",
+      "link": "https://arxiv.org/abs/2602.12918",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.18,
+      "why": "Haptic sensing and material recognition in soft robotics. No relevance to thruster control, MHD, or plasma physics.",
+      "tags": [
+        "Soft-Robotics",
+        "Tactile-Sensing",
+        "Perception"
+      ]
+    },
+    {
+      "id": "a296c28874cdc7ce3c24f31d16d648d0853b073c",
+      "title": "How Swarms Differ: Challenges in Collective Behaviour Comparison",
+      "link": "https://arxiv.org/abs/2602.13016",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.16,
+      "why": "Swarm behavior metrics and classification. Not relevant to single-agent thruster control or plasma physics.",
+      "tags": [
+        "Swarm-Robotics",
+        "Collective-Behavior",
+        "Metrics"
+      ]
+    },
+    {
+      "id": "125378f00b2c33ab174e7391d12b39b6643bf919",
+      "title": "Peak + Accumulation: A Proxy-Level Scoring Formula for Multi-Turn LLM Attack Detection",
+      "link": "https://arxiv.org/abs/2602.11247",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.15,
+      "why": "Addresses security for multi-turn LLM interactions—not relevant to computational plasma physics or aerospace engineering.",
+      "tags": [
+        "AI-Security",
+        "LLM Safety"
+      ]
+    },
+    {
+      "id": "377542782bbca33ef862f4ec4537eb0d15ec3d85",
+      "title": "Adaptive traffic signal control optimization using a novel road partition and multi-channel state representation method",
+      "link": "https://arxiv.org/abs/2602.12296",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.15,
+      "why": "RL for traffic control optimization. No relevance to plasma physics, propulsion, or computational physics research.",
+      "tags": [
+        "Reinforcement-Learning",
+        "Traffic-Control",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "9e300060049791fd1593d480ef607a613fe72399",
+      "title": "TFT-ACB-XML: Decision-Level Integration of Customized Temporal Fusion Transformer and Attention-BiLSTM with XGBoost Meta-Learner for BTC Price Forecasting",
+      "link": "https://arxiv.org/abs/2602.12380",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.15,
+      "why": "Time-series forecasting ensemble for financial markets. Not relevant to physical sciences research.",
+      "tags": [
+        "Time-Series",
+        "Forecasting",
+        "Finance"
+      ]
+    },
+    {
+      "id": "d15a59beef95fa78e4da0c2854c1c0b2d558c87f",
+      "title": "On Robustness and Chain-of-Thought Consistency of RL-Finetuned VLMs",
+      "link": "https://arxiv.org/abs/2602.12506",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.15,
+      "why": "Focuses on vision-language model robustness without scientific domain application; not aligned with computational physics or aerospace R&D workflows.",
+      "tags": [
+        "Vision-Language Models",
+        "RL Fine-tuning",
+        "Robustness"
+      ]
+    },
+    {
+      "id": "eaadd3e31b2fe4285703a42231778c18bdf20e14",
+      "title": "TRACE: Temporal Reasoning via Agentic Context Evolution for Streaming Electronic Health Records (EHRs)",
+      "link": "https://arxiv.org/abs/2602.12833",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.15,
+      "why": "Agentic LLM framework for medical EHRs. While demonstrating agentic temporal reasoning, application is strictly biomedical with no physical science overlap.",
+      "tags": [
+        "AI-Agents",
+        "Medical",
+        "LLM"
+      ]
+    },
+    {
+      "id": "816133d7b9dd646a1234365229d0146c7c6d8cd9",
+      "title": "RelBench v2: A Large-Scale Benchmark and Repository for Relational Data",
+      "link": "https://arxiv.org/abs/2602.12606",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.14,
+      "why": "Relational learning benchmark; data engineering focus without relevance to physics simulation or propulsion systems.",
+      "tags": [
+        "Relational Data",
+        "Benchmarks",
+        "Deep Learning"
+      ]
+    },
+    {
+      "id": "14b3385a19698f1e6ccd2292bbb5fc7fa7c31e81",
+      "title": "CRAFT: Adapting VLA Models to Contact-rich Manipulation via Force-aware Curriculum Fine-tuning",
+      "link": "https://arxiv.org/abs/2602.12532",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.14,
+      "why": "Force-aware vision-language-action model training for robotic manipulation is general robotics without aerospace or physics simulation application.",
+      "tags": [
+        "Vision-Language Models",
+        "Robotics",
+        "Force Control"
+      ]
+    },
+    {
+      "id": "4690a972c888d9cf783d0f8bc7f8e72dded937d8",
+      "title": "A Lightweight LLM Framework for Disaster Humanitarian Information Classification",
+      "link": "https://arxiv.org/abs/2602.12284",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.12,
+      "why": "Domain-specific NLP application for disaster response—not relevant to MHD, plasma propulsion, or scientific R&D automation.",
+      "tags": [
+        "NLP",
+        "Domain-Specific",
+        "Social Media Analysis"
+      ]
+    },
+    {
+      "id": "cf8e6c91b653cfcc2364189da16b729f8345f5ce",
+      "title": "From Biased Chatbots to Biased Agents: Examining Role Assignment Effects on LLM Agent Robustness",
+      "link": "https://arxiv.org/abs/2602.12285",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.12,
+      "why": "Examines demographic bias in LLM agents—relevant to fair AI but not to physics simulation, plasma dynamics, or scientific discovery acceleration.",
+      "tags": [
+        "AI-Fairness",
+        "LLM",
+        "Bias Analysis"
+      ]
+    },
+    {
+      "id": "90d95e61abad3b6ee858528dc316d74f2cec769c",
+      "title": "Policy4OOD: A Knowledge-Guided World Model for Policy Intervention Simulation against the Opioid Overdose Crisis",
+      "link": "https://arxiv.org/abs/2602.12373",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.12,
+      "why": "World model for public health policy simulation. Public health domain with no connection to aerospace, physics, or propulsion research.",
+      "tags": [
+        "World-Models",
+        "Policy-Simulation",
+        "Public-Health"
+      ]
+    },
+    {
+      "id": "a42aeb2029bcae40b1c00699af6ee168759f53b5",
+      "title": "Vehicle behaviour estimation for abnormal event detection using distributed fiber optic sensing",
+      "link": "https://arxiv.org/abs/2602.12591",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.12,
+      "why": "Traffic monitoring via fiber-optic sensing; civil infrastructure application outside computational physics or propulsion research.",
+      "tags": [
+        "Sensor Networks",
+        "Anomaly Detection",
+        "Infrastructure"
+      ]
+    },
+    {
+      "id": "e1bc02c7f6b95bf1da51294c2c63676b3e865c74",
+      "title": "Monocular Reconstruction of Neural Tactile Fields",
+      "link": "https://arxiv.org/abs/2602.12508",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.12,
+      "why": "Tactile sensing and haptic perception for robotic manipulation lacks relevance to propulsion physics, MHD simulation, or spacecraft control.",
+      "tags": [
+        "Perception",
+        "Tactile Sensing",
+        "Robotics"
+      ]
+    },
+    {
+      "id": "0df44a4b535f01cb8b142763e8f2579c074302f1",
+      "title": "Soft Contamination Means Benchmarks Test Shallow Generalization",
+      "link": "https://arxiv.org/abs/2602.12413",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.11,
+      "why": "LLM evaluation methodology analyzing data contamination effects. Relevant to understanding LLM reliability but not directly applicable to physics or propulsion research.",
+      "tags": [
+        "LLM-Evaluation",
+        "Generalization",
+        "Data-Contamination"
+      ]
+    },
+    {
+      "id": "a58464464c359dbd5efd8eb69b6c37f4245f4c6a",
+      "title": "XDiag: Exact Diagonalization for Quantum Many-Body Systems",
+      "link": "https://arxiv.org/abs/2505.02901",
+      "source": "[ArXiv] Computational Physics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.1,
+      "why": "Presents software for quantum many-body diagonalization. Not relevant to applied plasma physics or propulsion; focused on quantum chemistry/condensed matter theory.",
+      "tags": [
+        "Quantum Chemistry",
+        "Computational Methods"
+      ]
+    },
+    {
+      "id": "c99c82d376b5f7864b21d19b5985f21920f86aa4",
+      "title": "Language-Guided Invariance Probing of Vision-Language Models",
+      "link": "https://arxiv.org/abs/2511.13494",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.1,
+      "why": "Evaluates vision-language model robustness—not relevant to plasma physics, MHD simulation, or aerospace propulsion.",
+      "tags": [
+        "Vision-Language",
+        "Benchmarking",
+        "Robustness"
+      ]
+    },
+    {
+      "id": "5535ca059b5e47e563f822f40bd7b09ea625bf2e",
+      "title": "TFT-ACB-XML: Decision-Level Integration of Customized Temporal Fusion Transformer and Attention-BiLSTM with XGBoost Meta-Learner for BTC Price Forecasting",
+      "link": "https://arxiv.org/abs/2602.12380",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.1,
+      "why": "Financial forecasting via deep learning ensembles. No relevance to physics, engineering, or aerospace domains.",
+      "tags": [
+        "Time-Series-Forecasting",
+        "Deep-Learning",
+        "Finance"
+      ]
+    },
+    {
+      "id": "973f7a8a8fdde92c718316fe6627cd58545e5f0f",
+      "title": "AMPS: Adaptive Modality Preference Steering via Functional Entropy",
+      "link": "https://arxiv.org/abs/2602.12533",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.1,
+      "why": "Addresses multimodal LLM balancing; general AI without relevance to physics, spacecraft control, or propulsion systems.",
+      "tags": [
+        "Multimodal AI",
+        "LLM Alignment",
+        "Vision-Language"
+      ]
+    },
+    {
+      "id": "b99bf54ea4d9c0261be91713800e0ab39e302d2c",
+      "title": "A Simulation of Ageing and Care Accessibility in Italian Inner Areas",
+      "link": "https://arxiv.org/abs/2509.26496",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.1,
+      "why": "Agent-based modeling for social policy. No relevance to computational physics, aerospace engineering, or scientific R&D.",
+      "tags": [
+        "Agent-Based-Modeling",
+        "Social-Science"
+      ]
+    },
+    {
+      "id": "3b8ae658c332863da47bb1e91bda425a152dbae2",
+      "title": "MiDAS: A Multimodal Data Acquisition System and Dataset for Robot-Assisted Minimally Invasive Surgery",
+      "link": "https://arxiv.org/abs/2602.12407",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.1,
+      "why": "Surgical robotics dataset and telemetry system is domain-specific to medical applications with no relevance to computational physics or aerospace.",
+      "tags": [
+        "Medical Robotics",
+        "Dataset",
+        "Surgery"
+      ]
+    },
+    {
+      "id": "ce4ccd0ce49f9ccc4a3889ba3410d251c8078b36",
+      "title": "RankLLM: Weighted Ranking of LLMs by Quantifying Question Difficulty",
+      "link": "https://arxiv.org/abs/2602.12424",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.09,
+      "why": "Benchmark evaluation framework for comparing LLMs. Methodological contribution to LLM evaluation with no physics or aerospace application.",
+      "tags": [
+        "LLM-Evaluation",
+        "Benchmarking",
+        "Question-Difficulty"
+      ]
+    },
+    {
+      "id": "202f674fc75e4457a2efa62ac47679819825af3e",
+      "title": "GT-HarmBench: Benchmarking AI Safety Risks Through the Lens of Game Theory",
+      "link": "https://arxiv.org/abs/2602.12316",
+      "source": "[ArXiv] Multi-Agent Systems (cs.MA)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.09,
+      "why": "AI safety benchmark using game theory. Focuses on general AI risk rather than scientific application or agentic R&D.",
+      "tags": [
+        "AI-Safety",
+        "Game-Theory"
+      ]
+    },
+    {
+      "id": "b2f56a8c8d699bf5dcde7912eed1db9ee4f76734",
+      "title": "Constrained Assumption-Based Argumentation Frameworks",
+      "link": "https://arxiv.org/abs/2602.13135",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.08,
+      "why": "Formal argumentation theory extension—not relevant to computational physics, plasma dynamics, or scientific discovery workflows.",
+      "tags": [
+        "Formal Logic",
+        "Argumentation Theory"
+      ]
+    },
+    {
+      "id": "77be3d98d09b3d7a6a1c6f38bcc2da3677a5b177",
+      "title": "Retrieval-Augmented Self-Taught Reasoning Model with Adaptive Chain-of-Thought for ASR Named Entity Correction",
+      "link": "https://arxiv.org/abs/2602.12287",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.08,
+      "why": "NLP application for speech recognition. No connection to physics, propulsion, or aerospace research.",
+      "tags": [
+        "NLP",
+        "Speech-Recognition",
+        "Named-Entity-Recognition"
+      ]
+    },
+    {
+      "id": "0999f7f0696e7f7ba4fbea9c9ce11f4c8764e0fb",
+      "title": "Exploring Accurate and Transparent Domain Adaptation in Predictive Healthcare via Concept-Grounded Orthogonal Inference",
+      "link": "https://arxiv.org/abs/2602.12542",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.08,
+      "why": "Clinical prediction and domain adaptation; biomedical application explicitly outside research scope.",
+      "tags": [
+        "Healthcare AI",
+        "Domain Adaptation",
+        "Interpretability"
+      ]
+    },
+    {
+      "id": "b873e9fe631c6c8bf384dcf2da256d7464c5ec02",
+      "title": "SLA2: Sparse-Linear Attention with Learnable Routing and QAT",
+      "link": "https://arxiv.org/abs/2602.12675",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.08,
+      "why": "Attention mechanism optimization for diffusion models and video generation. No connection to physics simulation, plasma, or aerospace applications.",
+      "tags": [
+        "Machine-Learning",
+        "Attention",
+        "Diffusion"
+      ]
+    },
+    {
+      "id": "e8218b9389d786c7653d240b3c8f91c188908949",
+      "title": "Human Emotion-Mediated Soft Robotic Arts: Exploring the Intersection of Human Emotions, Soft Robotics and Arts",
+      "link": "https://arxiv.org/abs/2602.13163",
+      "source": "[ArXiv] Robotics",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.08,
+      "why": "Soft robotics for artistic and interactive installations. Not relevant to engineering or scientific applications in propulsion.",
+      "tags": [
+        "Soft-Robotics",
+        "Arts",
+        "HCI"
+      ]
+    },
+    {
+      "id": "55c5ad014937b825959cef90162fbb5fd76056fc",
+      "title": "OmniCustom: Sync Audio-Video Customization Via Joint Audio-Video Generation Model",
+      "link": "https://arxiv.org/abs/2602.12304",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.07,
+      "why": "Generative model for audio-video synthesis. Not relevant to computational physics or aerospace engineering.",
+      "tags": [
+        "Generative-Models",
+        "Audio-Video",
+        "Multimedia"
+      ]
+    },
+    {
+      "id": "7517bfa82194f63ceef9d162f773a523a64b83b0",
+      "title": "Flow Matching from Viewpoint of Proximal Operators",
+      "link": "https://arxiv.org/abs/2602.12683",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.07,
+      "why": "Theoretical work on generative models via optimal transport. While mathematically sophisticated, lacks application to physical systems or scientific computing.",
+      "tags": [
+        "Machine-Learning",
+        "Optimal-Transport",
+        "Generative-Models"
+      ]
+    },
+    {
+      "id": "c68069f38bc3265f50216d097d8deb4c161a0a46",
+      "title": "Quantum walk inspired JPEG compression of images",
+      "link": "https://arxiv.org/abs/2602.12306",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.06,
+      "why": "Quantum-inspired compression algorithm for images. No connection to physics simulation, plasma, or aerospace systems.",
+      "tags": [
+        "Image-Compression",
+        "Quantum-Inspired",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "82c16035e1f01cf8c161b43a10ba6b4a6b9ab52e",
+      "title": "Reproducing DragDiffusion: Interactive Point-Based Editing with Diffusion Models",
+      "link": "https://arxiv.org/abs/2602.12393",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.05,
+      "why": "Reproducibility study of diffusion-based image editing. Not relevant to aerospace, physics simulation, or propulsion research.",
+      "tags": [
+        "Diffusion-Models",
+        "Image-Editing",
+        "Generative-AI"
+      ]
+    },
+    {
+      "id": "1192d1d7f196144a9f3eba1a11fd78cc11e910f8",
+      "title": "Uncovering spatial tissue domains and cell types in spatial omics through cross-scale profiling of cellular and genomic interactions",
+      "link": "https://arxiv.org/abs/2602.12651",
+      "source": "[ArXiv] Machine Learning (cs.LG)",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.05,
+      "why": "Biomedical spatial analysis; biological application explicitly outside research scope in computational physics and aerospace.",
+      "tags": [
+        "Bioinformatics",
+        "Spatial Transcriptomics",
+        "Cell Biology"
+      ]
+    },
+    {
+      "id": "be4d7437ebbf955b4456846b3eddab1f83b9b40a",
+      "title": "Free Lunch in Medical Image Foundation Model Pre-training via Randomized Synthesis and Disentanglement",
+      "link": "https://arxiv.org/abs/2602.12317",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.04,
+      "why": "Medical image synthesis and pre-training framework. Biomedical domain with no connection to physics or aerospace research.",
+      "tags": [
+        "Medical-Imaging",
+        "Foundation-Models",
+        "Synthetic-Data"
+      ]
+    },
+    {
+      "id": "15dbde2737c3ce91902322d422689525801d064e",
+      "title": "Visible and Hyperspectral Imaging for Quality Assessment of Milk: Property Characterisation and Identification",
+      "link": "https://arxiv.org/abs/2602.12313",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.03,
+      "why": "Food science application of imaging for milk quality assessment. No relevance to physics, engineering, or aerospace domains.",
+      "tags": [
+        "Imaging",
+        "Food-Science",
+        "Quality-Assessment"
+      ]
+    },
+    {
+      "id": "57ff9de06422ae3e653f9a1b0f7d5875a4b09f93",
+      "title": "AgenticShop: Benchmarking Agentic Product Curation for Personalized Web Shopping",
+      "link": "https://arxiv.org/abs/2602.12315",
+      "source": "[ArXiv] Artificial Intelligence",
+      "published_utc": "2026-02-16T05:00:00+00:00",
+      "score": 0.02,
+      "why": "E-commerce agent benchmark for product curation. Business/retail domain with no connection to scientific research or aerospace engineering.",
+      "tags": [
+        "AI-Agents",
+        "E-Commerce",
+        "Personalization"
+      ]
+    }
+  ],
   "feed_status": [
     {
       "name": "[Core] Nature",
@@ -190,7 +3005,7 @@
       "url": "https://ojs.aaai.org/index.php/aimagazine/gateway/plugin/WebFeedGatewayPlugin/rss2",
       "status": "error",
       "items_found": 0,
-      "error": "text/html; charset=iso-8859-1 is not an XML media type"
+      "error": "text/html; charset=UTF-8 is not an XML media type"
     },
     {
       "name": "[AI] Pattern Recognition",
@@ -202,9 +3017,9 @@
     {
       "name": "[AI] Journal of Artificial Intelligence Research",
       "url": "https://jair.org/index.php/jair/gateway/plugin/WebFeedGatewayPlugin/rss",
-      "status": "error",
-      "items_found": 0,
-      "error": "text/html; charset=iso-8859-1 is not an XML media type"
+      "status": "ok",
+      "items_found": 1,
+      "error": ""
     },
     {
       "name": "[ArXiv] Plasma Physics",
