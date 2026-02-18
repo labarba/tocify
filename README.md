@@ -37,12 +37,11 @@ Fork this repository to your own GitHub account.
 Go to **Settings → Secrets and variables → Actions** and add the following repository secrets:
 
 **LLM Configuration (Required):**
-- `LLM_PROVIDER`: The provider you want to use (e.g., `anthropic`, `openai`, `google`).
-- `LLM_MODEL`: The specific model ID (e.g., `claude-3-haiku-20240307`, `gpt-4o`, `gemini-1.5-pro`).
-- `LLM_API_KEY`: A generic secret for your API key.
+- `LLM_PROVIDER`: The provider you want to use (e.g., `anthropic`, `openai`, `google`). Can also be set in `settings/llm.json`.
+- `LLM_MODEL`: The specific model ID (e.g., `claude-3-haiku-20240307`, `gpt-4o`, `gemini-1.5-pro`). Can also be set in `settings/llm.json`.
+- `LLM_API_KEY`: A generic secret for your API key. Alternatively, use provider-specific secrets below.
 
-**Provider-Specific Secrets (Optional but Recommended):**
-Instead of `LLM_API_KEY`, you can use provider-specific names which the system will recognize automatically:
+**Provider-Specific Secrets (Optional):**
 - `ANTHROPIC_API_KEY`: For Anthropic Claude models.
 - `OPENAI_API_KEY`: For OpenAI GPT models.
 - `GOOGLE_API_KEY`: For Google Gemini models.
@@ -54,6 +53,9 @@ Instead of `LLM_API_KEY`, you can use provider-specific names which the system w
 -   `SMTP_PASSWORD`: Your email password (or [App Password](https://support.google.com/accounts/answer/185833)).
 -   `DIGEST_FROM`: The "From" address.
 -   `DIGEST_TO`: Where to send the digest.
+
+> [!NOTE]
+> Environment variables and GitHub Repository Secrets take precedence over values in `settings/llm.json`.
 
 ### 3. Customize Your Interests
 Edit `settings/interests.md`. This is the "brain" of the operation.

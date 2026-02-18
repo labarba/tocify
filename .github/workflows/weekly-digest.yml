@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   digest:
@@ -38,13 +39,20 @@ jobs:
 
       - name: Run digest
         env:
+          # Model Configuration
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER || secrets.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || secrets.LLM_MODEL }}
+          
+          # API Keys
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MIN_SCORE_READ: "0.35"
-          LOOKBACK_DAYS: "7"
-          SUMMARY_MAX_CHARS: "500"
-          PREFILTER_KEEP_TOP: "200"
-          BATCH_SIZE: "25"
-          MAX_TOKENS: "8192"
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+
+          # Logic Overrides (Optional, will use settings/llm.json if not set)
+          MIN_SCORE_READ: ${{ vars.MIN_SCORE_READ }}
+          LOOKBACK_DAYS: ${{ vars.LOOKBACK_DAYS }}
+          BATCH_SIZE: ${{ vars.BATCH_SIZE }}
         run: python src/digest.py
         continue-on-error: true
 
