@@ -4,7 +4,7 @@
   "max_tokens": 8192,
   "batch_size": 25,
   "max_items_per_feed": 50,
-  "max_total_items": 600,
+  "max_total_items": 300,
   "lookback_days": 7,
   "interests_max_chars": 3000,
   "summary_max_chars": 500,
