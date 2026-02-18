@@ -397,17 +397,24 @@ def render_digest_md(result: dict, items_by_id: dict[str, dict]) -> str:
 
     for r in kept:
         it = items_by_id.get(r["id"], {})
+        
+        # Defensive extraction with fallbacks from original RSS data (it)
+        title = r.get("title") or it.get("title") or "Untitled"
+        link = r.get("link") or it.get("link") or "#"
+        source = r.get("source") or it.get("source") or "Unknown Source"
+        pub = r.get("published_utc") or it.get("published_utc")
+        score = r.get("score", 0.0)
+        why = r.get("why", "").strip() or "_No reason provided._"
         tags = ", ".join(r.get("tags", [])) if r.get("tags") else ""
-        pub = r.get("published_utc")
         summary = (it.get("summary") or "").strip()
 
         lines += [
-            f"## [{r['title']}]({r['link']})",
-            f"*{r['source']}*  ",
-            f"Score: **{r['score']:.2f}**" + (f"  \nPublished: {pub}" if pub else ""),
+            f"## [{title}]({link})",
+            f"*{source}*  ",
+            f"Score: **{score:.2f}**" + (f"  \nPublished: {pub}" if pub else ""),
             (f"Tags: {tags}" if tags else ""),
             "",
-            r["why"].strip(),
+            why,
             "",
         ]
         if summary:
