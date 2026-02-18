@@ -37,6 +37,12 @@ def main():
     report_lines.append("\n\nPlease check these feeds in `settings/feeds.txt`.")
     report_content = "".join(report_lines)
 
+    # Write file for Force-Add strategy
+    os.makedirs("data", exist_ok=True)
+    with open("data/bad_feeds_report.md", "w", encoding="utf-8") as f:
+        f.write(report_content)
+    print("Report written to data/bad_feeds_report.md")
+
     if gha_output:
         # GitHub Action multiline output syntax
         with open(gha_output, "a") as f:
