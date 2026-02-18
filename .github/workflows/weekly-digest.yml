@@ -59,17 +59,7 @@ jobs:
 
       - name: Check feed health
         id: check_feeds
-        run: |
-          if [ -f data/feed_health.json ]; then
-            python src/check_feeds.py
-            if [ -f data/bad_feeds_report.md ]; then
-              echo "feeds_failed=true" >> $GITHUB_OUTPUT
-            else
-              echo "feeds_failed=false" >> $GITHUB_OUTPUT
-            fi
-          else
-            echo "feeds_failed=false" >> $GITHUB_OUTPUT
-          fi
+        run: python src/check_feeds.py
         continue-on-error: true
 
       - name: Create Feed Health PR
@@ -79,7 +69,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: maintenance/fix-bad-feeds
           title: "🚨 RSS Feed Maintenance Required"
-          body-path: data/bad_feeds_report.md
+          body: ${{ steps.check_feeds.outputs.report_body }}
           commit-message: "chore: report bad RSS feeds"
           delete-branch: true
 

@@ -1,8 +1,8 @@
 import json
 import os
+import sys
 
 FEED_HEALTH_PATH = "data/feed_health.json"
-REPORT_PATH = "data/bad_feeds_report.md"
 
 def main():
     if not os.path.exists(FEED_HEALTH_PATH):
@@ -14,27 +14,42 @@ def main():
 
     bad_feeds = [f for f in data.get("feeds", []) if f["status"] == "error"]
 
+    gha_output = os.getenv("GITHUB_OUTPUT")
+
     if not bad_feeds:
         print("All feeds are healthy.")
-        # Ensure report file is empty or removed so GHA knows not to open a PR
-        if os.path.exists(REPORT_PATH):
-            os.remove(REPORT_PATH)
+        if gha_output:
+            with open(gha_output, "a") as f:
+                f.write("feeds_failed=false\n")
         return
 
     print(f"Found {len(bad_feeds)} bad feeds. Generating report...")
     
-    os.makedirs("data", exist_ok=True)
-    with open(REPORT_PATH, "w", encoding="utf-8") as f:
-        f.write("# 🚨 RSS Feed Maintenance Required\n\n")
-        f.write("The following RSS feeds failed during the last digest run:\n\n")
-        f.write("| Source | URL | Error |\n")
-        f.write("| :--- | :--- | :--- |\n")
-        for bf in bad_feeds:
-            f.write(f"| {bf['name']} | {bf['url']} | {bf['error']} |\n")
-        f.write("\n\nPlease check these feeds in `settings/feeds.txt`.")
+    report_lines = [
+        "# 🚨 RSS Feed Maintenance Required\n\n",
+        "The following RSS feeds failed during the last digest run:\n\n",
+        "| Source | URL | Error |\n",
+        "| :--- | :--- | :--- |\n"
+    ]
+    for bf in bad_feeds:
+        report_lines.append(f"| {bf['name']} | {bf['url']} | {bf['error']} |\n")
+    
+    report_lines.append("\n\nPlease check these feeds in `settings/feeds.txt`.")
+    report_content = "".join(report_lines)
 
-    # Set an output for GHA if needed, but checking file existence is often easier
-    print(f"Report written to {REPORT_PATH}")
+    if gha_output:
+        # GitHub Action multiline output syntax
+        with open(gha_output, "a") as f:
+            f.write("feeds_failed=true\n")
+            f.write("report_body<<EOF\n")
+            f.write(report_content)
+            f.write("\nEOF\n")
+        print("Report written to GITHUB_OUTPUT")
+    else:
+        # Local fallback/debug
+        print("\n--- REPORT ---")
+        print(report_content)
+        print("--------------")
 
 if __name__ == "__main__":
     main()
