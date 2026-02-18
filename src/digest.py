@@ -4,21 +4,52 @@ from datetime import datetime, timezone, timedelta
 import feedparser
 import httpx
 from dateutil import parser as dtparser
-from anthropic import Anthropic, APIStatusError, APIResponseValidationError, APIError
+import feedparser
+import httpx
+from dateutil import parser as dtparser
+import llm_wrapper
 
 
-# ---- config (env-tweakable) ----
-MODEL = os.getenv("ANTHROPIC_MODEL", "claude-haiku-4-5")
-MAX_ITEMS_PER_FEED = int(os.getenv("MAX_ITEMS_PER_FEED", "50"))
-MAX_TOTAL_ITEMS = int(os.getenv("MAX_TOTAL_ITEMS", "600"))
-LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "7"))
-INTERESTS_MAX_CHARS = int(os.getenv("INTERESTS_MAX_CHARS", "3000"))
-SUMMARY_MAX_CHARS = int(os.getenv("SUMMARY_MAX_CHARS", "500"))
-PREFILTER_KEEP_TOP = int(os.getenv("PREFILTER_KEEP_TOP", "300"))
-BATCH_SIZE = int(os.getenv("BATCH_SIZE", "50"))
-MIN_SCORE_READ = float(os.getenv("MIN_SCORE_READ", "0.65"))
-MAX_RETURNED = int(os.getenv("MAX_RETURNED", "40"))
-MAX_TOKENS = int(os.getenv("MAX_TOKENS", "8192"))
+# ---- load settings ----
+def load_llm_settings(path: str = "settings/llm.json") -> dict:
+    defaults = {
+        "provider": "anthropic",
+        "model": "claude-3-haiku-20240307",
+        "max_tokens": 8192,
+        "batch_size": 25,
+        "max_items_per_feed": 50,
+        "max_total_items": 600,
+        "lookback_days": 7,
+        "interests_max_chars": 3000,
+        "summary_max_chars": 500,
+        "prefilter_keep_top": 300,
+        "min_score_read": 0.65,
+        "max_returned": 40
+    }
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            try:
+                user_settings = json.load(f)
+                defaults.update(user_settings)
+            except json.JSONDecodeError:
+                print(f"Warning: Could not parse {path}, using defaults.")
+    return defaults
+
+SETTINGS = load_llm_settings()
+
+# ---- config (env-tweakable, overrides settings/llm.json) ----
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", SETTINGS["provider"]).lower()
+MODEL = os.getenv("LLM_MODEL", os.getenv("ANTHROPIC_MODEL", SETTINGS["model"]))
+MAX_ITEMS_PER_FEED = int(os.getenv("MAX_ITEMS_PER_FEED", str(SETTINGS["max_items_per_feed"])))
+MAX_TOTAL_ITEMS = int(os.getenv("MAX_TOTAL_ITEMS", str(SETTINGS["max_total_items"])))
+LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", str(SETTINGS["lookback_days"])))
+INTERESTS_MAX_CHARS = int(os.getenv("INTERESTS_MAX_CHARS", str(SETTINGS["interests_max_chars"])))
+SUMMARY_MAX_CHARS = int(os.getenv("SUMMARY_MAX_CHARS", str(SETTINGS["summary_max_chars"])))
+PREFILTER_KEEP_TOP = int(os.getenv("PREFILTER_KEEP_TOP", str(SETTINGS["prefilter_keep_top"])))
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", str(SETTINGS["batch_size"])))
+MIN_SCORE_READ = float(os.getenv("MIN_SCORE_READ", str(SETTINGS["min_score_read"])))
+MAX_RETURNED = int(os.getenv("MAX_RETURNED", str(SETTINGS["max_returned"])))
+MAX_TOKENS = int(os.getenv("MAX_TOKENS", str(SETTINGS["max_tokens"])))
 
 SCHEMA = {
     "type": "object",
@@ -93,9 +124,13 @@ def read_text(path: str) -> str:
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
     
-def load_prompt_template(path: str = "prompt.txt") -> str:
+def load_prompt_template(path: str = "settings/prompt.txt") -> str:
     if not os.path.exists(path):
-        raise RuntimeError("prompt.txt not found in repo root")
+        # Fallback to current dir for backward compatibility or local dev
+        if os.path.exists("prompt.txt"):
+            path = "prompt.txt"
+        else:
+            raise RuntimeError("prompt.txt not found in settings/ or root")
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
@@ -243,14 +278,8 @@ def keyword_prefilter(items: list[dict], keywords: list[str], keep_top: int) -> 
     return matched[:keep_top]
 
 
-# ---- anthropic ----
-def make_anthropic_client() -> Anthropic:
-    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    if not key.startswith("sk-ant-"):
-        raise RuntimeError("ANTHROPIC_API_KEY missing/invalid (expected to start with 'sk-ant-').")
-    return Anthropic(api_key=key)
-
-def call_claude_triage(client: Anthropic, interests: dict, items: list[dict]) -> dict:
+# ---- llm triage ----
+def call_llm_triage(interests: dict, items: list[dict]) -> dict:
     lean_items = [{
         "id": it["id"],
         "source": it["source"],
@@ -272,35 +301,31 @@ def call_claude_triage(client: Anthropic, interests: dict, items: list[dict]) ->
 
     tools = [
         {
-            "name": "generate_digest",
-            "description": "Generate a weekly ToC digest from ranked items.",
-            "input_schema": SCHEMA
+            "type": "function",
+            "function": {
+                "name": "generate_digest",
+                "description": "Generate a weekly ToC digest from ranked items.",
+                "parameters": SCHEMA
+            }
         }
     ]
 
-    last = None
     for attempt in range(6):
         try:
-            response = client.messages.create(
+            return llm_wrapper.call_llm_with_tools(
+                provider=LLM_PROVIDER,
                 model=MODEL,
-                max_tokens=MAX_TOKENS,
+                messages=[{"role": "user", "content": prompt}],
                 tools=tools,
-                tool_choice={"type": "tool", "name": "generate_digest"},
-                messages=[
-                    {"role": "user", "content": prompt}
-                ]
+                tool_choice={"type": "function", "function": {"name": "generate_digest"}},
+                max_tokens=MAX_TOKENS
             )
-            # Find the tool use block
-            for block in response.content:
-                if block.type == "tool_use" and block.name == "generate_digest":
-                    return block.input
-            raise RuntimeError("Claude did not call the generate_digest tool.")
-        except (APIStatusError, APIResponseValidationError, APIError) as e:
-            last = e
+        except Exception as e:
+            if attempt == 5:
+                raise e
             time.sleep(min(60, 2 ** attempt))
-    raise last
 
-def triage_in_batches(client: Anthropic, interests: dict, items: list[dict], batch_size: int) -> dict:
+def triage_in_batches(interests: dict, items: list[dict], batch_size: int) -> dict:
     week_of = datetime.now(timezone.utc).date().isoformat()
     total = math.ceil(len(items) / batch_size)
     all_ranked, notes_parts = [], []
@@ -308,7 +333,7 @@ def triage_in_batches(client: Anthropic, interests: dict, items: list[dict], bat
     for i in range(0, len(items), batch_size):
         batch = items[i:i + batch_size]
         print(f"Triage batch {i // batch_size + 1}/{total} ({len(batch)} items)")
-        res = call_claude_triage(client, interests, batch)
+        res = call_llm_triage(interests, batch)
         if res.get("notes", "").strip():
             notes_parts.append(res["notes"].strip())
         all_ranked.extend(res.get("ranked", []))
@@ -386,8 +411,15 @@ def render_digest_md(result: dict, items_by_id: dict[str, dict]) -> str:
 
 
 def main():
-    interests = parse_interests_md(read_text("interests.md"))
-    feeds = load_feeds("feeds.txt")
+    # Ensure data directory exists
+    os.makedirs("data", exist_ok=True)
+    
+    # Resolve config paths
+    interests_path = "settings/interests.md" if os.path.exists("settings/interests.md") else "interests.md"
+    feeds_path = "settings/feeds.txt" if os.path.exists("settings/feeds.txt") else "feeds.txt"
+    
+    interests = parse_interests_md(read_text(interests_path))
+    feeds = load_feeds(feeds_path)
     items, feed_statuses = fetch_rss_items(feeds)
 
     ok_count = sum(1 for f in feed_statuses if f["status"] == "ok")
@@ -395,29 +427,28 @@ def main():
 
     today = datetime.now(timezone.utc).date().isoformat()
     if not items:
-        with open("digest.md", "w", encoding="utf-8") as f:
+        with open("data/digest.md", "w", encoding="utf-8") as f:
             f.write(f"# Weekly ToC Digest (week of {today})\n\n_No RSS items found in the last {LOOKBACK_DAYS} days._\n")
-        print("No items; wrote digest.md")
+        print("No items; wrote data/digest.md")
         return
 
     items = keyword_prefilter(items, interests["keywords"], keep_top=PREFILTER_KEEP_TOP)
     print(f"Sending {len(items)} RSS items to model (post-filter)")
 
     items_by_id = {it["id"]: it for it in items}
-    client = make_anthropic_client()
 
-    result = triage_in_batches(client, interests, items, batch_size=BATCH_SIZE)
+    result = triage_in_batches(interests, items, batch_size=BATCH_SIZE)
     result["feed_status"] = feed_statuses
     md = render_digest_md(result, items_by_id)
 
-    with open("digest.md", "w", encoding="utf-8") as f:
+    with open("data/digest.md", "w", encoding="utf-8") as f:
         f.write(md)
-    print("Wrote digest.md")
+    print("Wrote data/digest.md")
 
     # Export structured data for the email generator
-    with open("digest.json", "w", encoding="utf-8") as f:
+    with open("data/digest.json", "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    print("Wrote digest.json")
+    print("Wrote data/digest.json")
 
     # Export feed health as a standalone log
     feed_log = {
@@ -431,9 +462,9 @@ def main():
         },
         "feeds": feed_statuses,
     }
-    with open("feed_health.json", "w", encoding="utf-8") as f:
+    with open("data/feed_health.json", "w", encoding="utf-8") as f:
         json.dump(feed_log, f, ensure_ascii=False, indent=2)
-    print("Wrote feed_health.json")
+    print("Wrote data/feed_health.json")
 
 
 if __name__ == "__main__":

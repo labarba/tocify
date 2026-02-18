@@ -4,8 +4,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime, timezone
 
-DIGEST_JSON_PATH = "digest.json"
-DIGEST_MD_PATH = "digest.md"
+DIGEST_JSON_PATH = "data/digest.json"
+DIGEST_MD_PATH = "data/digest.md"
 
 def load_data():
     if os.path.exists(DIGEST_JSON_PATH):
@@ -350,7 +350,8 @@ def main():
     html = generate_html(data)
     
     # Save debug output
-    with open("last_email.html", "w", encoding="utf-8") as f:
+    os.makedirs("data", exist_ok=True)
+    with open("data/last_email.html", "w", encoding="utf-8") as f:
         f.write(html)
         
     week = data.get("week_of", "Unknown")

@@ -204,4 +204,8 @@ cython_debug/
 # Marimo
 marimo/_static/
 marimo/_lsp/
-__marimo__/
+
+# Tocify specific
+data/
+settings/llm.json.example
+last_email.html
