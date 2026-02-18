@@ -1,123 +1,115 @@
-# Interests
+# tocify
+# ingest ToCs and push links to papers relevant to me
 
-## Keywords
+# interests seed
+<!-- 
+## scoring block
+Scoring calibration:
+Score ≥ 0.80 ONLY if the item clearly involves modern computational science developments including scientific machine learning.
 
-### Core Plasma Physics & MHD
-- Magnetohydrodynamics (MHD)
-- Multi-physics modeling of non-ideal MHD
-- Plasma physics
-- MPD thruster dynamics
-- Applied-field MPD (AF-MPD)
-- Hall-MHD
-- Plasma simulation
-- Non-ideal MHD effects (Lenz braking, Hall effect)
-- High-energy density physics
-- Laser-plasma interactions
-- Relativistic MHD
-- Cryogenic plasma modeling
-- Plasma-surface interactions
-- Plasma diagnostics simulation
-- Spectroscopy simulation
-- Dust-plasma interactions
-- Radiobiology in high-energy plasma
+If it is primarily about machine learning without an application in computational science and engineering,
+  cap score at 0.40.
 
-### Computational Methods & SciML
-- Computational fluid dynamics (CFD)
-- Scientific machine learning (SciML)
-- Physics-informed neural networks (PINNs)
-- Neural operators (FNO/DeepONet)
-- Physics-constrained optimization
-- PDE solvers (SOR, iterative methods)
-- Body-fitted grids & automated mesh generation
-- Successive over-relaxation (SOR) solvers
-- Numerical methods for extreme physics
-- Scientific computing
-- High-performance computing (HPC)
-- GPU kernel optimization (Triton, CUDA)
-- Mixed-fidelity simulation (fluid-particle hybrid)
-- Uncertainty quantification (UQ)
-- Verification and validation (V&V)
-- Surrogate modeling
-- Active learning in R&D
-- Monte Carlo simulations (DSMC)
-- Molecular dynamics (MD)
+If it is primarily theoretical work without an applied computational component,
+  cap score at 0.25. -->
 
-### Agentic R&D & AI Infrastructure
-- AI agents for scientific discovery
-- Agentic R&D pipelines (LangGraph, etc.)
-- LLM workflows for technical tasks
-- LLMs for PDE derivation and code generation
-- Autonomous research agents
-- Ollama for local scientific LLMs
-- Distributed agentic swarms
-- Natural language interfaces for simulations
-- AI for automated laboratory workflows
-- Agentic technical analysis & "rubber ducking"
-- AI for extracting technical data (OCR/Analysis)
-- Automated documentation of complex models
-- AI agents for bibliography management
+## keywords
+- scientific computing
+- computational fluid dynamics
+- CFD
+- vortex methods
+- viscous vortical flows
+- high-Reynolds number flows
+- isotropic turbulence
+- N-body simulation
+- fast multipole method
+- FMM
+- treecode algorithms
+- radial basis function interpolation
+- meshless methods
+- immersed boundary methods
+- boundary element methods
+- biomolecular electrostatics
+- protein–surface interactions
+- Poisson–Boltzmann equation
+- nanoplasmonics
+- biosensing applications
+- exascale computing
+- high-performance computing
+- parallel computing
+- heterogeneous systems
+- GPU computing
+- multi-GPU computing
+- Python for scientific computing
+- Jupyter-based workflows
+- open source scientific software
+- research software engineering
+- reproducible research
+- reproducible computational science
+- replicability in science
+- reproducibility taxonomies
+- trustworthy computational evidence
+- open access and open data policy
+- open source policy for science agencies
+- engineering education
+- flipped classrooms in STEM
+- computational thinking in engineering
+- open learning modules
+- generative AI in engineering education
+- AI-era assessment design
+- conversational exams
+- physics-informed neural networks
+- scientific machine learning
+- verification and validation for ML models
+- journal publishing workflows
+- software publication and review
+- scientific workflows on public clouds
 
-### Aerospace & Space Engineering
-- Spacecraft propulsion systems
-- Satellite dynamics & control
-- Hypersonics & reentry physics
-- Ablation modeling
-- Structural multiphysics
-- Computational orbital mechanics
-- Distributed satellite constellations
-- Advanced spacecraft control systems
-- Thermal-fluid dynamics
-- Space weather simulation
-- Reusable rocket physics
-- Orbital debris tracking
-- Autonomous spacecraft navigation
-- Planetary science mission R&D
-- In-Situ Resource Utilization (ISRU)
-- Lunar/Martian habitat R&D
-- Robotic mining physics
+## narrative
+My work centers on scientific computing and high‑performance methods for simulating complex physical systems, especially in fluid dynamics and biomolecular electrostatics. I have made contributions to meshless vortex methods, fast multipole algorithms, and GPU‑accelerated solvers that enable large‑scale simulations such as turbulence, N‑body interactions, and protein–surface electrostatics. 
 
-### Specialized Hardware & Materials
-- Fast hardware iteration for R&D
-- Rare-earth magnetics in aerospace
-- Computational materials science
-- Advanced ceramics for hypersonics
-- Refractory metals R&D
-- Cryogenic materials simulation
-- Stealth technology & RCS optimization
-- Advanced electromagnetics for propulsion
-- Microwave thrusters
-- Nuclear thermal propulsion (NTP)
-- FPGA design for space probes
+A major strand of my research and community leadership focuses on reproducible and replicable computational science, including terminology, taxonomies, workflows, and policy for open source software and trustworthy computational evidence. In parallel, I am active in engineering education and pedagogy, developing open learning resources with Python and Jupyter, writing about computational thinking, and exploring the role of generative AI and new assessment designs in engineering curricula.
 
-### Technical Strategy & Intelligence
-- R&D acceleration workflows
-- AI for competitive intelligence in defense
-- Technical recruiting in plasma physics
-- Technological forecasting (AI-enhanced)
-- Automated patent analysis for R&D
-- "Quant" aerospace intelligence
-- Analysis of global R&D velocity
-- Metrics for software health in physics code
+## paper titles
 
-## Negative Interests (Exclude)
-- General-purpose NLP (unless scientific)
-- Generic computer vision (unless for diagnostics/mesh)
-- Clinical medicine or general biology
-- Purely social sciences or economics (unless space colonization sociology)
-- General business news or policy without technical depth
-- Web development or standard consumer software
-- Cryptocurrencies or general blockchain (unless space asset DLT)
-- General purpose LLM news (unless regarding agentic R&D)
-
-## Narrative
-My research pushes the boundaries of extreme-environment physics through a dual-track approach: the specialized development of high-fidelity Magnetohydrodynamics (MHD) simulation frameworks and the creation of agentic R&D pipelines for rapid scientific discovery. As the primary architect of `pyfdMHD`, I focus on the intricate numerical modeling of applied-field Magnetoplasmadynamic (MPD) thrusters, where I derive and implement advanced solvers for non-ideal MHD effects, focusing on Lenz braking, back-EMF, and structural multi-physics coupling. I am deeply interested in computational electromagnetics, hypersonics, and the non-linear dynamics of high-energy plasmas, aiming to translate complex theoretical formulations into robust numerical outputs that drive the next generation of spacecraft propulsion and satellite technology.
-
-A critical pillar of my work is "R&D Acceleration"—the use of distributed AI agents and agentic workflows to bypass traditional bottlenecks in the scientific process. This includes building autonomous systems using frameworks like LangGraph, Ollama, and specialized physics-informed LLMs to manage automated mesh generation, iteratively refine simulation parameters (such as SOR relaxation factors), and orchestrate massive multi-physics modeling tasks. I explore how AI agents can serve as strategic R&D partners for scientific computing, technical analysis, and rapid engineering optimization, particularly in the aerospace and defense sectors.
-
-I prioritize research that bridges the gap between pure physics and applied engineering, focusing on:
-- **Numerical Innovation**: Novel PDE solvers, body-fitted grids, and Scientific Machine Learning (SciML) including Physics-Informed Neural Networks (PINNs) and Neural Operators.
-- **Multiphysics Integration**: Structural-fluid-plasma interactions and high-performance computing (HPC) workflows for real-time physics simulation.
-- **Agentic Infrastructure**: Autonomous research agents, distributed agent swarms for mission control, and natural language interfaces for scientific computing.
-- **Technical Strategy**: Using AI for competitive intelligence, grant analysis, and "Quant" style analysis of the global aerospace R&D landscape.
-
-I am not interested in general-purpose NLP or CV unless it is explicitly and technical applied to the physical sciences, PDE solving, or specialized engineering R&D. I seek papers with technical depth that provide actionable insights for accelerating technical R&D and mastering the physics of extreme environments.
+Some of my paper titles include:
+- Reproducibility and replicability in science
+- Terminologies for reproducible research
+- Advances in viscous vortex methods—meshless spatial adaption based on radial basis function interpolation
+- Sustainable computational science: the ReScience initiative
+- Biomolecular electrostatics using a fast multipole BEM on up to 512 GPUs and a billion unknowns 
+- PetRBF—A parallel O(N) algorithm for radial basis function interpolation with Gaussians
+- Petascale turbulence simulation using a highly parallel fast multipole method on GPUs
+- A Tuned and Scalable Fast Multipole Method as a Preeminent Algorithm for Exascale Systems
+- Teaching and learning with Jupyter
+- Treecode and fast multipole method for N-body simulation with CUDA 
+- PetFMM—A dynamically load‐balancing parallel fast multipole library
+- Vortex Method for computing high-Reynolds number flows: Increased accuracy with a fully mesh-less formulation
+- Experience report of physics-informed neural networks in fluid simulations: pitfalls and frustration
+- CFD Python: the 12 steps to Navier-Stokes equations 
+- Hierarchical n-body simulations with autotuning for heterogeneous systems
+- Lift and wakes of flying snakes
+- Reproducible and replicable computational fluid dynamics: It’s harder than you think
+- A biomolecular electrostatics solver using Python, GPUs and boundary elements that can handle solvent-filled cavities and Stern layers
+- The hard road to reproducibility 
+- Journal of Open Source Software (JOSS): design and first-year review
+- Fast radial basis function interpolation with Gaussians by localization and iteration
+- Computational Thinking: I do not think it means what you think it means
+- FMM-based vortex method for simulation of isotropic turbulence on GPUs, compared with a spectral method
+- How will the fast multipole method fare in the exascale era
+- Open Source Software Policy Options for NASA Earth and Space Sciences
+- ExaFMM: a high-performance fast multipole method library with C++ and Python interfaces
+- Emergence and evolution of tripole vortices from net-circulation initial conditions
+- Numerical investigations on the accuracy of the vortex method with and without remeshing
+- Toward a compatible reproducibility taxonomy for computational and computing sciences
+- Characterization of the accuracy of the fast multipole method in particle simulations
+- Praxis of reproducible computational science
+- Predictive limitations of physics-informed neural networks in vortex shedding 
+- Global field interpolation for particle methods
+- Comparing the treecode with FMM on GPUs for vortex particle simulations of a leapfrogging vortex ring
+- Probing protein orientation near charged nanosurfaces for simulation-assisted biosensor design
+- cuIBM--a GPU-accelerated immersed boundary method
+- How to obtain efficient GPU kernels: An illustration using FMM & FGT algorithms
+- Aero Python: classical aerodynamics of potential flow using Python
+- Poisson–Boltzmann model for protein–surface electrostatic interactions and grid-convergence study using the PyGBe code
+- Defining the role of open source software in research reproducibility
