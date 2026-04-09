@@ -209,3 +209,4 @@ marimo/_lsp/
 data/
 settings/llm.json.example
 last_email.html
+.DS_Store
